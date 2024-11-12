@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+public enum ItemType
+{
+    consumable,
+    weapon,
+    amulet //base type for non equpable items, and non consumable (ANYTHING else basically)
+
+}
 [CreateAssetMenu(fileName = "Item", menuName = "Item", order = 1)]
 public class ItemPrefab : ScriptableObject
 {
@@ -15,17 +24,18 @@ public class ItemPrefab : ScriptableObject
     //cosmetic
     public string itemName;
     public Sprite sprite;
-    public int description;
+    public string description;
+    public ItemType itemType;
 
-    //stats (its okay to leave them null)
-    public float defence;
-    public float health;
-    public float tempHealth;
-    public float walkspeed;
-    public float damage;
-    public float fireRate;
-    public float range;
-    public float bulletSpeed;
+    //stats (dont change it here)
+    public float defence = 0;
+    public float health = 0;
+    public float tempHealth = 0;
+    public float walkspeed = 0;
+    public float damage = 0;
+    public float fireRate = 0;
+    public float range = 0;
+    public float bulletSpeed = 0;
 
 
 
