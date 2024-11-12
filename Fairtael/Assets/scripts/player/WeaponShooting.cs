@@ -47,15 +47,16 @@ public class WeaponShoot : MonoBehaviour
         // Calculate the direction from the player to the mouse
         Vector3 direction = mouseposFixed - bulletSpawnPoint.transform.position;
 
-        // Calculate the angle in degrees
+        // Calculate the angle in degrees cuz u know
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
+        //why the fyuck does it need to bee a quaternion - ahhhh:-(
         quaternion angleFixed = Quaternion.Euler(0, 0, angle);
 
         // Spawn the bullet object
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
 
-        // Attach a script to the bullet to handle movement and raycasting
+        // Attach a script to the bullet to handle movement and raycast and cool shit
         bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer);
     }
     IEnumerator WaitAndAllowShoot(float tTime)
