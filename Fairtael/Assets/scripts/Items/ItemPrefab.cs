@@ -8,7 +8,7 @@ public enum ItemType
 {
     consumable,
     weapon,
-    amulet //base type for non equpable items, and non consumable (ANYTHING else basically)
+    other //base type for non equpable items, and non consumable (ANYTHING else basically)
 
 }
 [CreateAssetMenu(fileName = "Item", menuName = "Item", order = 1)]
@@ -24,6 +24,7 @@ public class ItemPrefab : ScriptableObject
     //cosmetic
     public string itemName;
     public Sprite sprite;
+    [TextArea(2,20)] //makes it more easy too read in the editor
     public string description;
     public ItemType itemType;
 
