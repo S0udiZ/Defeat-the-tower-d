@@ -6,7 +6,7 @@ TagManager:
   tags:
   - CameraPoint
   - bullet
-  - enemybase
+  - enemy
   layers:
   - Default
   - TransparentFX

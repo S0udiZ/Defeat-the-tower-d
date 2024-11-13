@@ -25,7 +25,7 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //mover
+        //this is to let you move
         Vector3 direction = new Vector3(0, 0, 0);
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
@@ -33,18 +33,26 @@ public class playercontroller : MonoBehaviour
         direction *= Speed;
         rb.velocity = direction;
 
+
+        //<!> This part reloads the scene, it needs to be changed when in the actual game to load the death screen
+        //title screen or whatever else<!>
         if (hearts == 0)
         {
             Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
+
+        //theres probably a better way to do this
+        hearttext.text = "Hearts: " + hearts;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //when you hit an enemy it does damage
-        if (collision.collider.CompareTag("enemybase"))
+        //when you hit an enemy it does damage to you
+        if (collision.collider.CompareTag("enemy"))
             hearts--;
 
+        //for shooting enemies
         if (collision.collider.CompareTag("enemybullet"))
             hearts=-2;
     }

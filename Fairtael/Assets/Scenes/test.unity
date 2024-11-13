@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 2039024808}
   m_Layer: 0
   m_Name: Enemy test
-  m_TagString: enemybase
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1564,6 +1564,7 @@ MonoBehaviour:
   rb: {fileID: 2039024809}
   hp: 5
   enemy: {fileID: 2039024807}
+  speed: 0
 --- !u!50 &2039024809
 Rigidbody2D:
   serializedVersion: 4

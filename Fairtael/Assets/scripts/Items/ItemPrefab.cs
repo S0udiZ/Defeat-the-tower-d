@@ -30,7 +30,7 @@ public class ItemPrefab : ScriptableObject
 
     //stats (dont change it here)
     public float defence = 0;
-    public float health = 0;
+    public float hearts = 0;
     public float tempHealth = 0;
     public float walkspeed = 0;
     public float damage = 0;

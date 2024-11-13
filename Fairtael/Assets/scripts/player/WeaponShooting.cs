@@ -23,6 +23,8 @@ public class WeaponShoot : MonoBehaviour
 
     float fireRate = 0.1f;
 
+    float damage = 1f;
+
     public bool justFired = false;
 
     void Update()
@@ -57,7 +59,7 @@ public class WeaponShoot : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
 
         // Attach a script to the bullet to handle movement and raycast and cool shit
-        bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer);
+        bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage);
     }
     IEnumerator WaitAndAllowShoot(float tTime)
     {
@@ -69,14 +71,17 @@ public class WeaponShoot : MonoBehaviour
 public class BulletMovement : MonoBehaviour
 {
     private float bulletSpeed;
+    private float damage;
     private LayerMask targetLayer;
     private Vector2 previousPosition;
+    public Enemybase enemybase;
 
     // Initialize the bullet's speed and target layer
-    public void Initialize(float speed, LayerMask layer)
+    public void Initialize(float speed, LayerMask layer, float newdamage)
     {
         bulletSpeed = speed;
         targetLayer = layer;
+        damage = newdamage;
         previousPosition = transform.position;
     }
 
@@ -96,6 +101,14 @@ public class BulletMovement : MonoBehaviour
         {
             // Debug log to show what was hit
             Debug.Log("Hit: " + hit.collider.name);
+            if (hit.collider.CompareTag("enemy"))
+            {
+                enemybase = hit.collider.gameObject.GetComponent<Enemybase>();
+                if(enemybase != null)
+                {
+                    enemybase.TakeDamage(damage);
+                }
+            }
 
             // Destroy the bullet
             Destroy(gameObject);
