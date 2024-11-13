@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class WeaponShoot : MonoBehaviour
 {
+    public Rigidbody2D rb;
+
     public Camera cam;
     public Vector3 mouseposFixed;
 
@@ -19,13 +21,21 @@ public class WeaponShoot : MonoBehaviour
     public LayerMask targetLayer;
 
     // Bullet speed
-    float bulletSpeed = 70f;
+    float bulletSpeed = 20f;
 
     float fireRate = 0.1f;
 
     float damage = 1f;
 
     public bool justFired = false;
+
+    private Vector2 lastMovementDirection;
+    quaternion oldRotation;
+
+    void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();  
+    }
 
     void Update()
     {
@@ -36,10 +46,20 @@ public class WeaponShoot : MonoBehaviour
             justFired = true;
             StartCoroutine(WaitAndAllowShoot(fireRate));
         }
+
+        // Get the player's current movement direction (assuming it's based on velocity)
+        Vector2 currentDirection = rb.velocity;
+
+        // Update lastMovementDirection if the player is moving
+        if (currentDirection != Vector2.zero)
+        {
+            lastMovementDirection = currentDirection.normalized;
+        }
     }
 
     void Shoot()
     {
+        /*
         Vector3 mousepos = Input.mousePosition;
 
         Vector3 mouseposWorld = cam.ScreenToWorldPoint(mousepos);
@@ -54,6 +74,17 @@ public class WeaponShoot : MonoBehaviour
 
         //why the fyuck does it need to bee a quaternion - ahhhh:-(
         quaternion angleFixed = Quaternion.Euler(0, 0, angle);
+
+
+        old code for 360 shooting
+        */
+
+
+        // Calculate the angle from the last movement direction
+        float angle = Mathf.Atan2(lastMovementDirection.y, lastMovementDirection.x) * Mathf.Rad2Deg;
+
+        // Create a rotation quaternion based on this angle
+        Quaternion angleFixed = Quaternion.Euler(0, 0, angle);
 
         // Spawn the bullet object
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
