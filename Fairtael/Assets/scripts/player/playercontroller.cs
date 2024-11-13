@@ -36,7 +36,7 @@ public class playercontroller : MonoBehaviour
 
         //<!> This part reloads the scene, it needs to be changed when in the actual game to load the death screen
         //title screen or whatever else<!>
-        if (hearts == 0)
+        if (hearts <= 0)
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
@@ -46,14 +46,9 @@ public class playercontroller : MonoBehaviour
         hearttext.text = "Hearts: " + hearts;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(int Tdamage) 
     {
-        //when you hit an enemy it does damage to you
-        if (collision.collider.CompareTag("enemy"))
-            hearts--;
-
-        //for shooting enemies
-        if (collision.collider.CompareTag("enemybullet"))
-            hearts=-2;
+        hearts -= Tdamage;
     }
+
 }
