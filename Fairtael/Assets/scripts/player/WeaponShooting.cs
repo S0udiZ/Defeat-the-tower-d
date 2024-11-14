@@ -24,14 +24,14 @@ public class WeaponShoot : MonoBehaviour
     // Bullet speed
     float bulletSpeed = 15f;
 
-    float fireRate = 0.01f;
+    float fireRate = 0.2f;
 
     float damage = 1f;
 
     public bool justFired = false;
 
 
-    public bool usingdirShooting = true;
+    public bool usingdirShooting = false;
 
 
     private Vector2 lastMovementDirection;
