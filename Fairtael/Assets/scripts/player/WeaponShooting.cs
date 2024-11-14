@@ -22,9 +22,9 @@ public class WeaponShoot : MonoBehaviour
     public LayerMask targetLayer;
 
     // Bullet speed
-    float bulletSpeed = 20f;
+    float bulletSpeed = 15f;
 
-    float fireRate = 0.1f;
+    float fireRate = 0.01f;
 
     float damage = 1f;
 
@@ -69,33 +69,19 @@ public class WeaponShoot : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) && !justFired)
+            if (!justFired)
             {
-                justFired = true;
-                shootdir = Vector2.up;
-                Shoot();
-                StartCoroutine(WaitAndAllowShoot(fireRate));
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow) && !justFired)
-            {
-                justFired = true;
-                shootdir = Vector2.down;
-                Shoot();
-                StartCoroutine(WaitAndAllowShoot(fireRate));
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && !justFired)
-            {
-                justFired = true;
-                shootdir = Vector2.left;
-                Shoot();
-                StartCoroutine(WaitAndAllowShoot(fireRate));
-            }
-            if (Input.GetKeyDown(KeyCode.RightArrow) && !justFired)
-            {
-                justFired = true;
-                shootdir = Vector2.right;
-                Shoot();
-                StartCoroutine(WaitAndAllowShoot(fireRate));
+                if (Input.GetKey(KeyCode.UpArrow)) shootdir = Vector2.up;
+                else if (Input.GetKey(KeyCode.DownArrow)) shootdir = Vector2.down;
+                else if (Input.GetKey(KeyCode.LeftArrow)) shootdir = Vector2.left;
+                else if (Input.GetKey(KeyCode.RightArrow)) shootdir = Vector2.right;
+
+                if (shootdir != Vector2.zero)
+                {
+                    justFired = true;
+                    Shoot();
+                    StartCoroutine(WaitAndAllowShoot(fireRate));
+                }
             }
 
 
@@ -138,6 +124,8 @@ public class WeaponShoot : MonoBehaviour
 
                 // Create a rotation quaternion based on this angle
                 angleFixed = Quaternion.Euler(0, 0, angle);
+                
+                shootdir = Vector2.zero;
             }
 
             // Spawn the bullet object
