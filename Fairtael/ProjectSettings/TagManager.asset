@@ -7,6 +7,8 @@ TagManager:
   - CameraPoint
   - bullet
   - enemy
+  - roomGen
+  - RoomSpawn
   layers:
   - Default
   - TransparentFX
