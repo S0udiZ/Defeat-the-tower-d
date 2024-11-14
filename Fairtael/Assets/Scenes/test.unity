@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd39972a3b058c4a98fbf0f433f6766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   cam: {fileID: 559616047}
   mouseposFixed: {x: 0, y: 0, z: 0}
   bulletSpawnPoint: {fileID: 143614660}
@@ -384,6 +385,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   justFired: 0
+  usingdirShooting: 1
 --- !u!1 &252988099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1328,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0.08665444}
-  m_LocalScale: {x: 23, y: 1, z: 1}
+  m_LocalScale: {x: 19, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1250920164}
