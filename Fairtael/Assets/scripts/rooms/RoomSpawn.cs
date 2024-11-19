@@ -20,7 +20,7 @@ public class RoomSpawn : MonoBehaviour
         {
             roomGen.NextRoom();
 
-            gameObject.SetActive(false);
+            
         }
     }
 

@@ -12,10 +12,8 @@ public class RoomGen : MonoBehaviour
     public GameObject ItemRoom;
     public GameObject OldRoom;
     public GameObject [] enemies;
-    public GameObject RoomSpawn;
 
-    public bool enemy;
-
+    GameObject[] everyRoomSpawn;
     private int ItemChance;
 
 
@@ -33,42 +31,30 @@ public class RoomGen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("enemy");
-        if (enemies.Length==0 && enemy)
-        {
-            enemy = false;
-            Debug.Log("bonkers");
-            RoomSpawn.SetActive(true);
-        }
-        else if (enemies.Length>0 && !enemy)
-        {
-            enemy = true;
-        }
+        
+
     }
 
     public void NextRoom()
     {
         
-        if (ItemChance <= Random.Range(1, 100))
+        if (ItemChance >= Random.Range(1, 101))
         {
-            RoomSpawn = null;
+           
             if (OldRoom != null)Destroy(OldRoom);
             OldRoom=Instantiate(roomList[3]);
-            ItemChance = 10;
+            ItemChance = 1;
 
-            RoomSpawn = GameObject.FindWithTag("RoomSpawn");
-            RoomSpawn.SetActive(false);
+
         }
         else
         {
-            RoomSpawn = null;
+  
             if (OldRoom != null) Destroy(OldRoom);
             int prefabIndex = UnityEngine.Random.Range(0, 2);
             OldRoom=Instantiate(roomList[prefabIndex]);
-            ItemChance += 10;
-
-            RoomSpawn = GameObject.FindWithTag("RoomSpawn");
-            RoomSpawn.SetActive(false);
+            ItemChance += Random.Range(1,11);
+     
         }
     }
 }
