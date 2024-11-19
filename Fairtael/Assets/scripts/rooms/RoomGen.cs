@@ -13,7 +13,6 @@ public class RoomGen : MonoBehaviour
     public GameObject OldRoom;
     public GameObject [] enemies;
     public GameObject RoomSpawn;
-    public GameObject RoomSpawnTwo;
 
     public bool enemy;
 
@@ -49,29 +48,26 @@ public class RoomGen : MonoBehaviour
 
     public void NextRoom()
     {
+        
         if (ItemChance <= Random.Range(1, 100))
         {
             RoomSpawn = null;
-            RoomSpawnTwo = null;
             if (OldRoom != null)Destroy(OldRoom);
             OldRoom=Instantiate(roomList[3]);
             ItemChance = 10;
 
-            RoomSpawnTwo = GameObject.FindWithTag("RoomSpawn");
-            if (RoomSpawnTwo != null) RoomSpawn = RoomSpawnTwo;
+            RoomSpawn = GameObject.FindWithTag("RoomSpawn");
             RoomSpawn.SetActive(false);
         }
         else
         {
             RoomSpawn = null;
-            RoomSpawnTwo = null;
             if (OldRoom != null) Destroy(OldRoom);
             int prefabIndex = UnityEngine.Random.Range(0, 2);
             OldRoom=Instantiate(roomList[prefabIndex]);
             ItemChance += 10;
 
-            RoomSpawnTwo = GameObject.FindWithTag("RoomSpawn");
-            if (RoomSpawnTwo != null) RoomSpawn = RoomSpawnTwo;
+            RoomSpawn = GameObject.FindWithTag("RoomSpawn");
             RoomSpawn.SetActive(false);
         }
     }
