@@ -17,7 +17,7 @@ public class RoomSpawn : MonoBehaviour
     {
         roomEmpty = GameObject.FindWithTag("roomGen");
         roomGen = roomEmpty.GetComponent<RoomGen>();
-
+        
 
     }
     
