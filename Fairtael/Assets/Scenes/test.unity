@@ -648,7 +648,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 2.8}
   m_EdgeRadius: 0
 --- !u!212 &1630808796
 SpriteRenderer:
@@ -711,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 1630808791}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.948, y: -0.199, z: 0}
+  m_LocalPosition: {x: -0.838, y: -0.214, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -768,8 +768,6 @@ MonoBehaviour:
   ItemRoom: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
   OldRoom: {fileID: 0}
   enemies: []
-  RoomSpawn: {fileID: 0}
-  enemy: 0
 --- !u!1 &1831683796
 GameObject:
   m_ObjectHideFlags: 0

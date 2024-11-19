@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemybase : MonoBehaviour
+public /*Static?*/ class Enemybase : MonoBehaviour
 {
 
 
