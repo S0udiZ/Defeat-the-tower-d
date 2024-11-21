@@ -133,7 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 178340813}
   - component: {fileID: 178340812}
-  m_Layer: 0
+  - component: {fileID: 178340814}
+  m_Layer: 6
   m_Name: Pathfinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezEXQkkdAIAAC0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yVlg3ntbdchZA9JqJCtXHwR1hirEJJLjwBJ8e87km3ssCdU3TM9PQ/zRbg0FeRW6ZXm7EkxID8HxL/Jj0FHPsKJ7pTc8E9oY945s6UPoiHmlVquEI99mlEHsJrnv+RO+OAIQSd5ofRhyXaQKmMNwgUVBpDSyvpsidDXgJzwZ7jwKWd8jWb+9YmvRTS44DMHaUF3oZO7xTRKpkkyXw6jeZt1N54n8XwyWyA4awSGkyDgZC7ooQLmu+l04jY3rutI7LOJ8D3lSghuGpPEnqswhJRWxmGLGMA4xaaDMx9fAt+V1lvpJ78UhQHbTETT8z3XOLtalfxW9UAP1OxrXx9UOF9nmgRLtebTf/QwDnSh1eGxLRtHvoQteb5/peecGtsbeB++/+7bySMVe7oV8F6CfFYrrZxkSFrtfKozMLrvSV1bS0vI911c7fUGdFU373bB7Xp9E5fQ/SkV/LD11F1SAxuhwrzDVYDGzfxBx+FmTCOBqHfx18Ab3fWPqyEeuDYWqaZN6e1tldM+lCzD0Hw3zqZKSwhwY7oCSYU9r1HG3q7whuuVvWEeqP+MmuIN134dNykB7uKj6IZaq+N1W6ZUxycw5YuzgkvoTHviGeeUKinrC+vPpE3bOF3QvJe2c5x9vy0yKqY0YmM6p9Eoh2Q6ZEU8Hk/iYpZMGWxnCQnHxyX2ScW6NtqMB7cmO3GJh9b+uwxWmlbh2pmmxxX/PKjeyLks1CbXAPKlVrgaB41F8KtkS8ZxQBuwlsuwb/KVEaHyPbDsKpSFTpcnq2nWqWSk4h/KeiQjafg7yYiHr7e81vDB4eiLt2IXcvkHUEsDBBQAAAgIAAAIIex0odWtbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSUZpZokGKcaJFooFRcqqJmW5KmqGxsalhmrmJWUpqkrmJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIezEXQkkdAIAAC0FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIex0odWtbQAAAHgAAAAJACQAAAAAAAAAAAAAAMECAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAeQMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIexuWidYcwIAACsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMmS2jAQ/RVK5zBlg9lyS4BhcpgZakhqLr4Iq41VyJJLkoet+Pe05DXkZOn19vp1yzfCpSkgsUpvNGevigH5PiDuTL4NOuMLnOlByR2/QuPzyZnNnBP1Ph/UcoV46MKMysFqnvyQB+GcAwRLyVOl8zU7wFIZaxBOqTCAJq2si5YI3QbkjJ/hwoVc8DSaudMVT4tgcMdjAtKC7lwnT4tpEE2jaL4eBvMm6mk8j8L5ZLZAcFYnGE58glImguYFMNdNlydsYsOqjsQ+aw/XU6KE4KYmSeyl8CLsigw0OBUYp9izJzbCawb8kNn60sa+p6kBWwui6WXFNUpXJSU/VaVnTs2xovVFRenKTCPPqMr5+p95GHpzqlX+0pQNA1fCZjw5ftBLQo3t6d2HVx3v0ItzouJI9wI+M5BvaqNVKRkarS5daGlgtOqubWfLDJJjh1dUH8Cy6NRuxtsM1/Vw982fl4Lne2d6iipgJ5RX2+8EaJzLLyTsN8bUKRB1LP4Y+E0P/dWqDc9cG4umukvp6O1VqZ0rWXvNXDelXSotwcM16QIkFfayxTT2cYIPtl7ZB8szdY+oLl7bmrfxEOLhzj8IHkxbdWqHZTJ1egWTvZdWcAkdaWd4Q52WSspqwfqaNGG7Uqc06YUdSs7+XS0ySqc0YGM6p8EogWg6ZGk4Hk/CdBZNGexnEfG7xyX2ScW2IlrLg1OTXXKJe9b8WwYbTQu/7EzT04Zfc9WTnMtU7RININ+rDC1x0FgE3yRbM44C7cBaLv28yS0mQiVHYHGbKPadrs9W07jLEpOCfynrkJgs/c8kJg5ud3mr4YvDyRVvkt3J/S9QSwMEFAAACAgAAAgh7HSh1a1tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJRmlmiQYpxokWigVFyqomZbkqaobGxqWGauYlZSmqSuYlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7G5aJ1hzAgAAKwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7HSh1a1tAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -168,7 +169,7 @@ MonoBehaviour:
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
   logPathResults: 1
-  maxNearestNodeDistance: 100
+  maxNearestNodeDistance: 10
   scanOnStartup: 1
   fullGetNearestSearch: 0
   prioritizeGraphs: 0
@@ -218,7 +219,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -242,6 +243,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &178340814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178340811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a875378c7cfdf4f8da315f8c5d9929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Obstacles: []
+  OldObstacles: []
 --- !u!1 &428727355
 GameObject:
   m_ObjectHideFlags: 0

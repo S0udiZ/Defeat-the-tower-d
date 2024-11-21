@@ -6,21 +6,20 @@ using Pathfinding;
 public class EnemyMove : MonoBehaviour
 {
     private AIPath path;
-    [SerializeField] private float movespeed;
-    [SerializeField] private Transform player;
+    [SerializeField] private float Movespeed;
+    [SerializeField] private Transform Player;
+
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        Player = GameObject.FindWithTag("Player").transform;
         path = GetComponent<AIPath>();
     }
 
     private void Update()
     {
+         path.maxSpeed = Movespeed;
 
-            path.maxSpeed = movespeed;
-
-            path.destination = player.position;
-
+         path.destination = Player.position;
     }
 }
