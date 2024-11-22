@@ -10,6 +10,7 @@ TagManager:
   - roomGen
   - RoomSpawn
   - Obstacle
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX

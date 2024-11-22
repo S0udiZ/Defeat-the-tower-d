@@ -901,7 +901,7 @@ MonoBehaviour:
   Room1: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
   Room2: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
   Room3: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
-  ItemRoom: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
+  ItemRoom: {fileID: 678532263647076357, guid: 4fa9b1e84dfd8074faeccee29eaadbe3, type: 3}
   OldRoom: {fileID: 0}
 --- !u!1 &1831683796
 GameObject:

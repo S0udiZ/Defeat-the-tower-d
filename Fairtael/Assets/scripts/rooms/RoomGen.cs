@@ -7,7 +7,6 @@ public class RoomGen : MonoBehaviour
 
     List<GameObject> roomList = new List<GameObject>();
     public List<GameObject> enemies = new List<GameObject>();
-    //public GameObject[] enemies;
 
     public RoomSpawn roomSpawnScript;
 
@@ -19,7 +18,11 @@ public class RoomGen : MonoBehaviour
     public GameObject OldRoom;
 
     GameObject[] everyRoomSpawn;
-    private int ItemChance;
+    GameObject player;
+    GameObject playerSpawn;
+
+
+    public int ItemChance;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,7 @@ public class RoomGen : MonoBehaviour
         roomList.Add(Room3);
 
         NextRoom();
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -54,7 +58,8 @@ public class RoomGen : MonoBehaviour
             OldRoom = Instantiate(roomList[0]);
             ItemChance = 1;
 
-
+            playerSpawn = GameObject.FindWithTag("PlayerSpawn");
+            player.transform.position = playerSpawn.transform.position;
         }
         else
         {
@@ -63,6 +68,9 @@ public class RoomGen : MonoBehaviour
             int prefabIndex = UnityEngine.Random.Range(1, 3);
             OldRoom = Instantiate(roomList[prefabIndex]);
             ItemChance += Random.Range(1, 11);
+
+            playerSpawn = GameObject.FindWithTag("PlayerSpawn");
+            player.transform.position = playerSpawn.transform.position;
 
         }
     }
