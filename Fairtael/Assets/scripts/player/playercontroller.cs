@@ -11,7 +11,7 @@ public class playercontroller : MonoBehaviour
     public Rigidbody2D rb;
     public int hearts;
     public TMP_Text hearttext;
-
+    SpriteRenderer spriteRenderer;
 
 
 
@@ -20,6 +20,7 @@ public class playercontroller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         hearttext.text = "Hearts: " + hearts;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,15 @@ public class playercontroller : MonoBehaviour
         direction = Vector3.ClampMagnitude(direction, 1);
         direction *= Speed;
         rb.velocity = direction;
-
+        if(direction.x < 0) 
+        {
+            spriteRenderer.flipX = false;
+        
+        }
+        if (direction.x > 0) 
+        {
+            spriteRenderer.flipX = true;
+        }
 
         //<!> This part reloads the scene, it needs to be changed when in the actual game to load the death screen
         //title screen or whatever else<!>

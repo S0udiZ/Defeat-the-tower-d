@@ -667,6 +667,7 @@ GameObject:
   - component: {fileID: 1630808794}
   - component: {fileID: 1630808793}
   - component: {fileID: 1630808792}
+  - component: {fileID: 1630808798}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -711,7 +712,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 119
   justFired: 0
-  usingdirShooting: 0
+  usingdirShooting: 1
 --- !u!50 &1630808794
 Rigidbody2D:
   serializedVersion: 4
@@ -852,6 +853,27 @@ Transform:
   - {fileID: 1831683797}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1630808798
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630808791}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 752c820ed68208047a02b12a9d3404fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1648542153
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +925,9 @@ MonoBehaviour:
   Room3: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
   ItemRoom: {fileID: 678532263647076357, guid: 4fa9b1e84dfd8074faeccee29eaadbe3, type: 3}
   OldRoom: {fileID: 0}
+  player: {fileID: 0}
+  playerSpawn: {fileID: 0}
+  ItemChance: 0
 --- !u!1 &1831683796
 GameObject:
   m_ObjectHideFlags: 0
