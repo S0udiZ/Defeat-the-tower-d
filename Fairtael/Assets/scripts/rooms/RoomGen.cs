@@ -18,8 +18,8 @@ public class RoomGen : MonoBehaviour
     public GameObject OldRoom;
 
     GameObject[] everyRoomSpawn;
-    GameObject player;
-    GameObject playerSpawn;
+    public GameObject player;
+    public GameObject playerSpawn;
 
 
     public int ItemChance;
@@ -36,7 +36,7 @@ public class RoomGen : MonoBehaviour
         roomList.Add(Room3);
 
         NextRoom();
-        player = GameObject.FindWithTag("Player");
+
     }
 
     void Update()
@@ -58,6 +58,7 @@ public class RoomGen : MonoBehaviour
             OldRoom = Instantiate(roomList[0]);
             ItemChance = 1;
 
+            player = GameObject.FindWithTag("Player");
             playerSpawn = GameObject.FindWithTag("PlayerSpawn");
             player.transform.position = playerSpawn.transform.position;
         }
@@ -69,6 +70,7 @@ public class RoomGen : MonoBehaviour
             OldRoom = Instantiate(roomList[prefabIndex]);
             ItemChance += Random.Range(1, 11);
 
+            player = GameObject.FindWithTag("Player");
             playerSpawn = GameObject.FindWithTag("PlayerSpawn");
             player.transform.position = playerSpawn.transform.position;
 
