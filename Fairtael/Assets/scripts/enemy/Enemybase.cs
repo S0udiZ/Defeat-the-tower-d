@@ -5,28 +5,43 @@ using UnityEngine;
 public /*Static?*/ class Enemybase : MonoBehaviour
 {
 
-
-    //this script is gonna be used as a base for future enemies, its gonna have the basics like taking damage and letting 
-    //you set health, speed, etc, im still not quite sure if were making the enemies follow the player or move around in specific
-    //patterns but ill leave it empty for now, i expect it to change depending on if the enemy is a hitter or a shooter
-
-
     public Rigidbody2D rb;
-    public float hp;
+    public float hp = 2;
     public GameObject enemy;
     public float speed;
+
+    public RoomGen roomgenscript;
+
+
+    void Awake()
+    {
+        GameObject roomGenObj = GameObject.FindWithTag("roomGen");
+        roomgenscript = roomGenObj.GetComponent<RoomGen>();
+
+        if (roomgenscript != null && roomgenscript.enemies != null) roomgenscript.enemies.Add(this.gameObject);
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         if (hp <= 0)
+        {
             Destroy(enemy);
-            
+        }
+
     }
     public void TakeDamage(float damage)
     {
         hp -= damage;
     }
+    void OnDestroy()
+    {
+        if (!Application.isPlaying) return;
 
-
+        if (roomgenscript != null && roomgenscript.enemies != null && this.gameObject != null)
+        {
+            roomgenscript.enemies.Remove(this.gameObject);
+        }
+    }
 }
