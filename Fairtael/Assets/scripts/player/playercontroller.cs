@@ -99,4 +99,16 @@ public class playercontroller : MonoBehaviour
         hearts -= Tdamage;
     }
 
+
+
+    public void TakeItem(ItemObject _item)
+    {
+        if (_item)
+        {
+            inventory.AddItem(_item, 1);
+
+        }
+    }
+
+
 }

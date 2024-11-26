@@ -11,6 +11,7 @@ TagManager:
   - RoomSpawn
   - Obstacle
   - PlayerSpawn
+  - ItemBookUI
   layers:
   - Default
   - TransparentFX
