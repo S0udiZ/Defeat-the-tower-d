@@ -24,7 +24,7 @@ public class WeaponShoot : MonoBehaviour
     // Bullet speed
     float bulletSpeed = 15f;
 
-    float fireRate = 0.2f;
+    float fireRate = 0.3f;
 
     float damage = 1f;
 

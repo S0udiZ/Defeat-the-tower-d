@@ -46,7 +46,7 @@ public class playercontroller : MonoBehaviour
         direction *= Speed;
         rb.velocity = direction;
 
-        ani.SetBool("NotWalking", Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0);
+        ani.SetBool("NotWalking", Input.GetAxisRaw("Vertical") == 0 && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D));
         ani.SetBool("WalkingHor", Input.GetAxisRaw("Horizontal") != 0);
         ani.SetBool("WalkingBack", Input.GetAxisRaw("Vertical") > 0);
         ani.SetBool("WalkingFront", Input.GetAxisRaw("Vertical") < 0);
