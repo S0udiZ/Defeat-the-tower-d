@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RoomGen : MonoBehaviour
@@ -23,6 +24,8 @@ public class RoomGen : MonoBehaviour
 
 
     public int ItemChance;
+
+    public TMP_Text chanceText;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +64,8 @@ public class RoomGen : MonoBehaviour
             player = GameObject.FindWithTag("Player");
             playerSpawn = GameObject.FindWithTag("PlayerSpawn");
             player.transform.position = playerSpawn.transform.position;
+
+            chanceText.text = ItemChance + "%";
         }
         else
         {
@@ -68,11 +73,13 @@ public class RoomGen : MonoBehaviour
             if (OldRoom != null) Destroy(OldRoom);
             int prefabIndex = UnityEngine.Random.Range(1, 3);
             OldRoom = Instantiate(roomList[prefabIndex]);
-            ItemChance += Random.Range(1, 11);
+            ItemChance += Random.Range(1, 16);
 
             player = GameObject.FindWithTag("Player");
             playerSpawn = GameObject.FindWithTag("PlayerSpawn");
             player.transform.position = playerSpawn.transform.position;
+
+            chanceText.text = ItemChance + "%";
 
         }
     }
