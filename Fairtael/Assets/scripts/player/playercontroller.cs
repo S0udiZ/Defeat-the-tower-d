@@ -7,11 +7,17 @@ using UnityEditor;
 
 public class playercontroller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public InventoryObject inventory;
+
+
     public float Speed = 10;
     public Rigidbody2D rb;
+
+
     public int hearts;
     public TMP_Text hearttext;
+
+
     SpriteRenderer spriteRenderer;
 
     Animator ani;
@@ -46,6 +52,7 @@ public class playercontroller : MonoBehaviour
         direction *= Speed;
         rb.velocity = direction;
 
+        //hella bad animation code but it works sooooo   :-)
         ani.SetBool("NotWalking", Input.GetAxisRaw("Vertical") == 0 && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D));
         ani.SetBool("WalkingHor", Input.GetAxisRaw("Horizontal") != 0);
         ani.SetBool("WalkingBack", Input.GetAxisRaw("Vertical") > 0);
