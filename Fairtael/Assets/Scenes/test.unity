@@ -922,7 +922,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 572995669589774358, guid: 771fbf8ca59b3a44381917b640dce093, type: 3}
   targetLayer:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 65
   justFired: 0
   usingdirShooting: 0
 --- !u!50 &1630808794
