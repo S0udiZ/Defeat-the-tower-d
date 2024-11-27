@@ -17,6 +17,8 @@ public class playercontroller : MonoBehaviour
     public int hearts;
     public TMP_Text hearttext;
 
+    public GameObject shooterpath;
+
 
     SpriteRenderer spriteRenderer;
 
@@ -92,6 +94,9 @@ public class playercontroller : MonoBehaviour
 
         //theres probably a better way to do this
         hearttext.text = "Hearts: " + hearts;
+
+        //umm uhh moves the shooters path to the other side of the screen
+        shooterpath.transform.position = new Vector3(-rb.transform.position.x,-rb.transform.position.y,0);
     }
 
     public void TakeDamage(int Tdamage) 

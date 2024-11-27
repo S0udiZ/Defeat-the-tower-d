@@ -8,12 +8,24 @@ public class EnemyMove : MonoBehaviour
     private AIPath path;
     [SerializeField] private float Movespeed;
     [SerializeField] private Transform Player;
+    public bool shooter;
 
 
     void Start()
     {
-        Player = GameObject.FindWithTag("Player").transform;
-        path = GetComponent<AIPath>();
+        if (shooter == false)
+        {
+            Player = GameObject.FindWithTag("Player").transform;
+            path = GetComponent<AIPath>();
+        }
+        
+
+        else
+        {
+            Player = GameObject.FindWithTag("ShooterPath").transform;
+            path = GetComponent<AIPath>();
+        }
+        
     }
 
     private void Update()

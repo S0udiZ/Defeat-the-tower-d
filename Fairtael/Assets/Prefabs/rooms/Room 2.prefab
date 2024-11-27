@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7438769828452416636}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -876,11 +876,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2972798321128318466, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
       propertyPath: shooter
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4172112716031209849, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
       propertyPath: m_Name
       value: Enemy test
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495498865639415989, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495498865639415989, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495498865639415989, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
+      propertyPath: m_Color.r
+      value: 0.10896361
       objectReference: {fileID: 0}
     - target: {fileID: 4737844293745182725, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
       propertyPath: m_LocalPosition.x
