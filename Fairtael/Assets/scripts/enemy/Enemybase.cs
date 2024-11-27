@@ -9,6 +9,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     public float hp = 2;
     public GameObject enemy;
     public float speed;
+    public GameObject obstacle;
 
     public RoomGen roomgenscript;
 
@@ -37,6 +38,8 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     }
     void OnDestroy()
     {
+        Instantiate(obstacle, transform.position,Quaternion.identity,roomgenscript.OldRoom.transform);
+
         if (!Application.isPlaying) return;
 
         if (roomgenscript != null && roomgenscript.enemies != null && this.gameObject != null)

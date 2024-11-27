@@ -19,7 +19,7 @@ public class ItemChoiceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKey(KeyCode.Escape))
         {
             GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
             Transform childTransform = game.gameObject.transform.GetChild(0);
@@ -35,7 +35,8 @@ public class ItemChoiceScript : MonoBehaviour
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
         Transform childTransform = game.gameObject.transform.GetChild(0);
         ItemChoiceUI = childTransform.gameObject;
-        
+
+        Time.timeScale = 0;
 
         ItemChoiceUI.SetActive(true);
 
