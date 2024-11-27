@@ -12,6 +12,7 @@ TagManager:
   - Obstacle
   - PlayerSpawn
   - ItemBookUI
+  - ShooterPath
   layers:
   - Default
   - TransparentFX

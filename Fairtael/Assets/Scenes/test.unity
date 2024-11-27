@@ -1588,6 +1588,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353332671}
   m_CullTransparentMesh: 1
+--- !u!1 &1414359830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414359831}
+  m_Layer: 0
+  m_Name: ShooterPath
+  m_TagString: ShooterPath
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414359831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414359830}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19335268, y: -0.49359107, z: 0.19108672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475344898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1775,7 @@ MonoBehaviour:
   rb: {fileID: 1630808794}
   hearts: 2
   hearttext: {fileID: 660905884}
+  shooterpathpos: {fileID: 1414359830}
 --- !u!114 &1630808793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,7 +2007,7 @@ MonoBehaviour:
   enemies: []
   roomSpawnScript: {fileID: 0}
   Room1: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
-  Room2: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
+  Room2: {fileID: 678532263647076357, guid: 177c5053c26c2aa4b8a6d83794c83fde, type: 3}
   Room3: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
   ItemRoom: {fileID: 678532263647076357, guid: 4fa9b1e84dfd8074faeccee29eaadbe3, type: 3}
   OldRoom: {fileID: 0}
@@ -2229,3 +2261,4 @@ SceneRoots:
   - {fileID: 1178865332}
   - {fileID: 178340813}
   - {fileID: 1720728668}
+  - {fileID: 1414359831}
