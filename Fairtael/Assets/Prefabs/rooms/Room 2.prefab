@@ -878,6 +878,14 @@ PrefabInstance:
       propertyPath: shooter
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2972798321128318466, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
+      propertyPath: Movespeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157180515427818975, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
+      propertyPath: autoRepath.maximumInterval
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4172112716031209849, guid: a1461989ea8c16c4b8762200b2dfae66, type: 3}
       propertyPath: m_Name
       value: Enemy test
