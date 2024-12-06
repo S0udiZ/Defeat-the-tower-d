@@ -6,16 +6,16 @@ using UnityEngine;
 public class RoomGen : MonoBehaviour
 {
 
-    List<GameObject> roomList = new List<GameObject>();
+    public List<GameObject> roomList = new List<GameObject>();
     public List<GameObject> enemies = new List<GameObject>();
 
     public RoomSpawn roomSpawnScript;
 
 
-    public GameObject Room1;
+    /*public GameObject Room1;
     public GameObject Room2;
     public GameObject Emptyroom;
-    public GameObject ItemRoom;
+    public GameObject ItemRoom;*/
     public GameObject OldRoom;
 
     GameObject[] everyRoomSpawn;
@@ -32,12 +32,12 @@ public class RoomGen : MonoBehaviour
     {
         enemies.Add(this.gameObject);
 
-
+        /*
         roomList.Add(ItemRoom);
         roomList.Add(Emptyroom);
         roomList.Add(Room1);
         roomList.Add(Room2);
-
+        */
 
         NextRoom();
 
@@ -74,7 +74,7 @@ public class RoomGen : MonoBehaviour
             if (OldRoom != null) 
             {
                 Destroy(OldRoom);
-                int prefabIndex = UnityEngine.Random.Range(2, 4);
+                int prefabIndex = UnityEngine.Random.Range(2, roomList.Count);
                 OldRoom = Instantiate(roomList[prefabIndex]);
             }
 
