@@ -164,7 +164,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 0.9094449, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.4811321, g: 0.24574421, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9008127705465939747, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9008127705465939757, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Name
       value: MainMenu
@@ -564,15 +568,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706323393638, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Color.b
-      value: 0.85534364
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706323393638, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Color.g
-      value: 0.4292453
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706323393638, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.03998506
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706323393639, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -604,11 +608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706399175376, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Color.b
-      value: 0.85534364
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706399175376, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Color.g
-      value: 0.4292453
+      value: 0.60861975
       objectReference: {fileID: 0}
     - target: {fileID: 9008127706399175376, guid: 9babc648ecff7de44a6c967be18c48eb, type: 3}
       propertyPath: m_Color.r

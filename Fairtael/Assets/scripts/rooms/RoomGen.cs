@@ -14,7 +14,7 @@ public class RoomGen : MonoBehaviour
 
     public GameObject Room1;
     public GameObject Room2;
-    public GameObject Room3;
+    public GameObject Emptyroom;
     public GameObject ItemRoom;
     public GameObject OldRoom;
 
@@ -34,9 +34,10 @@ public class RoomGen : MonoBehaviour
 
 
         roomList.Add(ItemRoom);
+        roomList.Add(Emptyroom);
         roomList.Add(Room1);
         roomList.Add(Room2);
-        roomList.Add(Room3);
+
 
         NextRoom();
 
@@ -70,9 +71,17 @@ public class RoomGen : MonoBehaviour
         else
         {
 
-            if (OldRoom != null) Destroy(OldRoom);
-            int prefabIndex = UnityEngine.Random.Range(1, 3);
-            OldRoom = Instantiate(roomList[prefabIndex]);
+            if (OldRoom != null) 
+            {
+                Destroy(OldRoom);
+                int prefabIndex = UnityEngine.Random.Range(2, 4);
+                OldRoom = Instantiate(roomList[prefabIndex]);
+            }
+
+            else
+            {
+                OldRoom = Instantiate(roomList[1]);
+            }
             ItemChance += Random.Range(1, 16);
 
             player = GameObject.FindWithTag("Player");

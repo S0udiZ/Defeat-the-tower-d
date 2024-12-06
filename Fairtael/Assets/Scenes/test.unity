@@ -1771,11 +1771,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  Speed: 10
+  Speed: 7
   rb: {fileID: 1630808794}
   hearts: 2
   hearttext: {fileID: 660905884}
-  shooterpathpos: {fileID: 1414359830}
 --- !u!114 &1630808793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,10 +2005,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: []
   roomSpawnScript: {fileID: 0}
-  Room1: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
-  Room2: {fileID: 678532263647076357, guid: 177c5053c26c2aa4b8a6d83794c83fde, type: 3}
-  Room3: {fileID: 678532263647076357, guid: 7c24242b579f02d4dbccb59e0334d13a, type: 3}
-  ItemRoom: {fileID: 678532263647076357, guid: 4fa9b1e84dfd8074faeccee29eaadbe3, type: 3}
+  Room1: {fileID: 678532263647076357, guid: fb9d7ba4e9ab7ad4f95fccc826bf259a, type: 3}
+  Room2: {fileID: 678532263647076357, guid: 280ce816c0e083a40ab5b3a6e0785312, type: 3}
+  Emptyroom: {fileID: 678532263647076357, guid: d3758b05c09b1b34db30da3658a1b0fd, type: 3}
+  ItemRoom: {fileID: 678532263647076357, guid: 9868667e0433b024bbb8e9d8ef5ff547, type: 3}
   OldRoom: {fileID: 0}
   player: {fileID: 0}
   playerSpawn: {fileID: 0}

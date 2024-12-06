@@ -38,7 +38,8 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     }
     void OnDestroy()
     {
-        Instantiate(obstacle, transform.position,Quaternion.identity,roomgenscript.OldRoom.transform);
+
+        if(roomgenscript.OldRoom.transform != null)Instantiate(obstacle, transform.position,Quaternion.identity,roomgenscript.OldRoom.transform);
 
         if (!Application.isPlaying) return;
 
