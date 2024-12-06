@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class playercontroller : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class playercontroller : MonoBehaviour
 
 
     public int hearts;
+    public int maxHearts;
     public TMP_Text hearttext;
 
 
@@ -22,7 +24,7 @@ public class playercontroller : MonoBehaviour
 
     Animator ani;
 
-
+    public GameObject healthBar;
 
     // To avoid flipping too early
     private bool canFlip = true;
@@ -41,6 +43,9 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        healthBar.GetComponent<Image>().fillAmount = hearts / maxHearts;
+
         // Get current animation state info
         AnimatorStateInfo stateInfo = ani.GetCurrentAnimatorStateInfo(0);
 
