@@ -8,10 +8,13 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     public Rigidbody2D rb;
     public float hp = 2;
     public GameObject enemy;
-    public float speed;
     public GameObject obstacle;
+    public int Edamage = 1;
+    SpriteRenderer spriteRenderer;
 
+    public EnemyMove enemymovescript;
     public RoomGen roomgenscript;
+   
 
 
     void Awake()
@@ -20,6 +23,8 @@ public /*Static?*/ class Enemybase : MonoBehaviour
         roomgenscript = roomGenObj.GetComponent<RoomGen>();
 
         if (roomgenscript != null && roomgenscript.enemies != null) roomgenscript.enemies.Add(this.gameObject);
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -35,7 +40,18 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     public void TakeDamage(float damage)
     {
         hp -= damage;
+        StartCoroutine(redblink());
+        //enemymovescript.stunlock();
     }
+    
+    //this thing makes the thing work
+    IEnumerator redblink()
+    {
+        spriteRenderer.color = new Color(255, 0, 0, 1);
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = new Color(255, 255, 255, 1);
+    }
+    
     void OnDestroy()
     {
 
@@ -48,4 +64,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
             roomgenscript.enemies.Remove(this.gameObject);
         }
     }
+
+  
+   
 }

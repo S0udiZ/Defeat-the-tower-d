@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class playercontroller : MonoBehaviour
 {
     public InventoryObject inventory;
+    public Enemybase Enemybase;
 
 
     public float Speed = 10;
@@ -19,6 +20,7 @@ public class playercontroller : MonoBehaviour
     public int maxHearts;
     public TMP_Text hearttext;
 
+    public bool immunity = false;
 
     SpriteRenderer spriteRenderer;
 
@@ -41,7 +43,7 @@ public class playercontroller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         healthBar.GetComponent<Image>().fillAmount = hearts / maxHearts;
@@ -98,16 +100,50 @@ public class playercontroller : MonoBehaviour
         //theres probably a better way to do this
         hearttext.text = "Hearts: " + hearts;
 
-
     }
 
-    public void TakeDamage(int Tdamage) 
+    IEnumerator unimmunity()
     {
-        hearts -= Tdamage;
+
+        yield return new WaitForSeconds(1.5f);
+        immunity = false;
     }
 
+    IEnumerator redblink()
+    {
+        spriteRenderer.color = new Color(255, 0, 0, 1);
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = new Color(255, 255, 255, 1);
+    }
 
+     public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.tag==("enemy"))
+        {
+            if (immunity == false)
+            {
+                Debug.Log("SIGMA!!!");
+                hearts--;//Enemybase.Edamage;
+                immunity = true;
+                StartCoroutine(redblink());
+                StartCoroutine(unimmunity());
 
+            }
+            /*Debug.Log("sigma!");
+            TakeDamage();*/
+        }
+    }
+    public void TakeDamage()  //(int Tdamage)
+    {
+        if (immunity == false)
+        {
+            hearts -= Enemybase.Edamage;
+            immunity = true;
+            StartCoroutine(redblink());
+            StartCoroutine(unimmunity());
+
+        }
+    }
     public void TakeItem(ItemObject _item)
     {
         if (_item)
@@ -116,6 +152,4 @@ public class playercontroller : MonoBehaviour
 
         }
     }
-
-
 }

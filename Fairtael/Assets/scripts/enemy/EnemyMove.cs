@@ -6,10 +6,10 @@ using Pathfinding;
 public class EnemyMove : MonoBehaviour
 {
     private AIPath path;
-    [SerializeField] private float Movespeed;
+    [SerializeField] public float Movespeed;
     [SerializeField] private Transform player;
     public bool shooter;
-    [SerializeField]  Vector3 targetPos;
+    [SerializeField] Vector3 targetPos;
 
 
     void Start()
@@ -19,7 +19,7 @@ public class EnemyMove : MonoBehaviour
             player = GameObject.FindWithTag("Player").transform;
             path = GetComponent<AIPath>();
         }
-        
+
 
         else
         {
@@ -30,13 +30,13 @@ public class EnemyMove : MonoBehaviour
 
             path = GetComponent<AIPath>();
         }
-        
+
     }
 
     private void Update()
     {
 
-        if(shooter==true)
+        if (shooter == true)
         {
             Vector3 dir = player.transform.position - transform.position;
             dir = dir.normalized;
@@ -54,5 +54,17 @@ public class EnemyMove : MonoBehaviour
             path.destination = player.position;
         }
 
+    }
+
+    public void stunlock()
+    {
+        IEnumerator stun()
+        {
+            Debug.Log("uhhghhhg");
+            Movespeed = Movespeed - 5;
+            yield return new WaitForSeconds(0.2f);
+            Movespeed = Movespeed + 5;
+
+        }
     }
 }

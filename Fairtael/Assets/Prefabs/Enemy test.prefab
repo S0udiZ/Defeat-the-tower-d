@@ -180,6 +180,7 @@ MonoBehaviour:
   enemy: {fileID: 4172112716031209849}
   speed: 0
   obstacle: {fileID: 3500700735517763395, guid: 218e1d1d2a8f2c740a7088688cf99d20, type: 3}
+  damage: 1
   roomgenscript: {fileID: 0}
 --- !u!114 &4781837537888663818
 MonoBehaviour:
@@ -264,8 +265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movespeed: 2
-  Player: {fileID: 0}
+  player: {fileID: 0}
   shooter: 0
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!58 &-5485521707651787838
 CircleCollider2D:
   m_ObjectHideFlags: 0
