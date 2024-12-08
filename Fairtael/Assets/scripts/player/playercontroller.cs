@@ -116,7 +116,7 @@ public class playercontroller : MonoBehaviour
         spriteRenderer.color = new Color(255, 255, 255, 1);
     }
 
-     public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.tag==("enemy"))
         {
@@ -133,11 +133,11 @@ public class playercontroller : MonoBehaviour
             TakeDamage();*/
         }
     }
-    public void TakeDamage()  //(int Tdamage)
+    public void TakeDamage(int Tdamage)
     {
         if (immunity == false)
         {
-            hearts -= Enemybase.Edamage;
+            hearts -= Tdamage;
             immunity = true;
             StartCoroutine(redblink());
             StartCoroutine(unimmunity());

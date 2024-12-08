@@ -2034,11 +2034,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
+  Enemybase: {fileID: 0}
   Speed: 7
   rb: {fileID: 1630808794}
   hearts: 2
-  maxHearts: 5
+  maxHearts: 2
   hearttext: {fileID: 660905884}
+  immunity: 0
   healthBar: {fileID: 1089413896}
 --- !u!114 &1630808793
 MonoBehaviour:

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3013056518541559495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7842724902181142332}
+  m_Layer: 0
+  m_Name: BulletspawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7842724902181142332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013056518541559495}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13902926, y: -0.07741737, z: 0.000072016264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1677498314058051078}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8025922464453891962
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +47,7 @@ GameObject:
   - component: {fileID: 1503041721860054793}
   - component: {fileID: 8013832535772773340}
   - component: {fileID: 9207081461298954241}
+  - component: {fileID: 1847873390737818525}
   - component: {fileID: 7302618193180014017}
   m_Layer: 0
   m_Name: Shooter
@@ -36,7 +68,8 @@ Transform:
   m_LocalPosition: {x: 3.99, y: -2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7842724902181142332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7558350767622440630
@@ -178,8 +211,9 @@ MonoBehaviour:
   rb: {fileID: 5072785157392898520}
   hp: 5
   enemy: {fileID: 8025922464453891962}
-  speed: 0
   obstacle: {fileID: 3500700735517763395, guid: 218e1d1d2a8f2c740a7088688cf99d20, type: 3}
+  Edamage: 1
+  enemymovescript: {fileID: 0}
   roomgenscript: {fileID: 0}
 --- !u!114 &1503041721860054793
 MonoBehaviour:
@@ -264,8 +298,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movespeed: 2
-  Player: {fileID: 0}
+  player: {fileID: 0}
   shooter: 1
+  targetPos: {x: 0, y: 0, z: 0}
+--- !u!114 &1847873390737818525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025922464453891962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f697b89796dc6be4383d28bac5c17f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5072785157392898520}
+  bulletSpawnPoint: {fileID: 7842724902181142332}
+  bulletPrefab: {fileID: 572995669589774358, guid: 771fbf8ca59b3a44381917b640dce093, type: 3}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 72
+  justFired: 0
+  player: {fileID: 0}
 --- !u!58 &7302618193180014017
 CircleCollider2D:
   m_ObjectHideFlags: 0
