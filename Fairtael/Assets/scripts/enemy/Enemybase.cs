@@ -11,6 +11,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     public GameObject obstacle;
     public int Edamage = 1;
     SpriteRenderer spriteRenderer;
+    public float speed;
 
     public EnemyMove enemymovescript;
     public RoomGen roomgenscript;
@@ -41,9 +42,17 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     {
         hp -= damage;
         StartCoroutine(redblink());
-        //enemymovescript.stunlock();
+        StartCoroutine(stun());
     }
-    
+
+        IEnumerator stun()
+        {
+            Debug.Log("uhhghhhg");
+            speed = speed - 10;
+            yield return new WaitForSeconds(0.2f);
+            speed = speed + 10;
+
+        }
     //this thing makes the thing work
     IEnumerator redblink()
     {

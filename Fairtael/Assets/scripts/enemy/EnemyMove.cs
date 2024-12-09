@@ -10,14 +10,17 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] private Transform player;
     public bool shooter;
     [SerializeField] Vector3 targetPos;
+    Enemybase basescript;
 
 
     void Start()
     {
+        
         if (shooter == false)
         {
             player = GameObject.FindWithTag("Player").transform;
             path = GetComponent<AIPath>();
+            path.maxSpeed = Movespeed;
         }
 
 
@@ -25,16 +28,16 @@ public class EnemyMove : MonoBehaviour
         {
             //umm uhh moves the shooters path to the other side of the screen
             player = GameObject.FindWithTag("Player").transform;
-
-
-
             path = GetComponent<AIPath>();
+            path.maxSpeed = Movespeed;
+            
         }
 
     }
 
     private void Update()
     {
+
 
         if (shooter == true)
         {
@@ -43,28 +46,20 @@ public class EnemyMove : MonoBehaviour
             targetPos = player.transform.position + -dir * 10;
             targetPos = targetPos - transform.position;
 
+            Movespeed = this.gameObject.GetComponent<Enemybase>().speed;
             path.maxSpeed = Movespeed;
 
             path.destination = targetPos;
         }
         else
         {
-            path.maxSpeed = Movespeed;
-
             path.destination = player.position;
+
+            Movespeed = this.gameObject.GetComponent<Enemybase>().speed;
+            path.maxSpeed = Movespeed;
         }
 
     }
 
-    public void stunlock()
-    {
-        IEnumerator stun()
-        {
-            Debug.Log("uhhghhhg");
-            Movespeed = Movespeed - 5;
-            yield return new WaitForSeconds(0.2f);
-            Movespeed = Movespeed + 5;
 
-        }
-    }
 }

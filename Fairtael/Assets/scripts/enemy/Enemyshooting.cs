@@ -21,7 +21,7 @@ public class Enemyshooting : MonoBehaviour
     // Bullet speed
     float bulletSpeed = 15f;
 
-    float fireRate = 0.3f;
+    public float fireRate = 4;
 
     int damage = 1;
 
@@ -42,6 +42,7 @@ public class Enemyshooting : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        StartCoroutine(shootdelay());
     }
 
     void Update()
@@ -55,6 +56,8 @@ public class Enemyshooting : MonoBehaviour
         void Shoot()
         {
 
+            
+            /*
             player = GameObject.FindWithTag("Player");
 
             // Calculate the direction from the player to the mouse
@@ -73,11 +76,37 @@ public class Enemyshooting : MonoBehaviour
 
             // Attach a script to the bullet to handle movement and raycast and cool shit
             bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage);
+            */
         }
         IEnumerator WaitAndAllowShoot(float tTime)
         {
             yield return new WaitForSeconds(tTime);
             justFired = false;
+        }
+
+    //this Enumerator just makses a cooldown with "fireRate" and puts in in front of the entire shoot part of the script
+        IEnumerator shootdelay()
+        {
+        yield return new WaitForSeconds(fireRate);
+        player = GameObject.FindWithTag("Player");
+
+        // Calculate the direction from the player to the mouse
+        Vector3 direction = player.gameObject.transform.position - bulletSpawnPoint.transform.position;
+
+        // Calculate the angle in degrees cuz u know
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        //why the fyuck does it need to bee a quaternion - ahhhh:-(
+        quaternion angleFixed = Quaternion.Euler(0, 0, angle);
+
+
+
+        // Spawn the bullet object
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
+
+        // Attach a script to the bullet to handle movement and raycast and cool shit
+        bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage);
+        StartCoroutine(shootdelay());
         }
 }
 

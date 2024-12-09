@@ -116,7 +116,7 @@ public class playercontroller : MonoBehaviour
         spriteRenderer.color = new Color(255, 255, 255, 1);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.collider.gameObject.tag==("enemy"))
         {

@@ -29,6 +29,8 @@ public class WeaponShoot : MonoBehaviour
 
     float damage = 1f;
 
+    float life = 0.5f;
+
     public bool justFired = false;
 
 
@@ -133,7 +135,7 @@ public class WeaponShoot : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
 
             // Attach a script to the bullet to handle movement and raycast and cool shit
-            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage);
+            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage, life);
         }
         IEnumerator WaitAndAllowShoot(float tTime)
         {
@@ -146,17 +148,20 @@ public class WeaponShoot : MonoBehaviour
     {
         private float bulletSpeed;
         private float damage;
+        private float life;
         private LayerMask targetLayer;
         private Vector2 previousPosition;
         public Enemybase enemybase;
 
         // Initialize the bullet's speed and target layer
-        public void Initialize(float speed, LayerMask layer, float newdamage)
+        public void Initialize(float speed, LayerMask layer, float newdamage, float tlife)
         {
             bulletSpeed = speed;
             targetLayer = layer;
             damage = newdamage;
+            life = tlife;
             previousPosition = transform.position;
+            StartCoroutine(LifeTime());
         }
 
         void Update()
@@ -200,6 +205,11 @@ public class WeaponShoot : MonoBehaviour
             // Move the bullet forward
             transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
         }
-
+        IEnumerator LifeTime()
+        {
+            yield return new WaitForSeconds(life);
+            Destroy(gameObject);
+        }
     }
+ 
 }
