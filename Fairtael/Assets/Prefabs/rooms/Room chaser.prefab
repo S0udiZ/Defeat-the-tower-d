@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 5915414290405923831}
   - component: {fileID: 4665041191608208019}
   - component: {fileID: 4326583795183029468}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RoomSpawner
   m_TagString: RoomSpawn
   m_Icon: {fileID: 0}
