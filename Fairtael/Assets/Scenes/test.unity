@@ -2272,6 +2272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomList:
   - {fileID: 678532263647076357, guid: 9868667e0433b024bbb8e9d8ef5ff547, type: 3}
+  - {fileID: 678532263647076357, guid: d3758b05c09b1b34db30da3658a1b0fd, type: 3}
   - {fileID: 678532263647076357, guid: fb9d7ba4e9ab7ad4f95fccc826bf259a, type: 3}
   - {fileID: 678532263647076357, guid: 13e0b101e42991e4c926955dea7b81bc, type: 3}
   - {fileID: 678532263647076357, guid: 280ce816c0e083a40ab5b3a6e0785312, type: 3}

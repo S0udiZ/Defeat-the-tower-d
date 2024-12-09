@@ -24,7 +24,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
         roomgenscript = roomGenObj.GetComponent<RoomGen>();
 
         if (roomgenscript != null && roomgenscript.enemies != null) roomgenscript.enemies.Add(this.gameObject);
-
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -45,14 +45,14 @@ public /*Static?*/ class Enemybase : MonoBehaviour
         StartCoroutine(stun());
     }
 
-        IEnumerator stun()
-        {
+    IEnumerator stun()
+    {
             Debug.Log("uhhghhhg");
             speed = speed - 10;
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(1f);
             speed = speed + 10;
 
-        }
+    }
     //this thing makes the thing work
     IEnumerator redblink()
     {
