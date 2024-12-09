@@ -56,7 +56,6 @@ public class Enemyshooting : MonoBehaviour
         void Shoot()
         {
 
-            
             /*
             player = GameObject.FindWithTag("Player");
 
