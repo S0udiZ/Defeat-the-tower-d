@@ -13,6 +13,7 @@ public class EnemyMove : MonoBehaviour
     Enemybase basescript;
 
 
+
     void Start()
     {
         
@@ -37,29 +38,26 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
+            if (shooter == true)
+            {
+                Vector3 dir = player.transform.position - transform.position;
+                dir = dir.normalized;
+                targetPos = player.transform.position + -dir * 10;
+                targetPos = targetPos - transform.position;
 
+                path.maxSpeed = Movespeed;
 
-        if (shooter == true)
-        {
-            Vector3 dir = player.transform.position - transform.position;
-            dir = dir.normalized;
-            targetPos = player.transform.position + -dir * 10;
-            targetPos = targetPos - transform.position;
+                path.destination = targetPos;
+            }
+            else
+            {
+                path.destination = player.position;
 
-            Movespeed = this.gameObject.GetComponent<Enemybase>().speed;
-            path.maxSpeed = Movespeed;
+                path.maxSpeed = Movespeed;
+            }
 
-            path.destination = targetPos;
-        }
-        else
-        {
-            path.destination = player.position;
-
-            Movespeed = this.gameObject.GetComponent<Enemybase>().speed;
-            path.maxSpeed = Movespeed;
-        }
 
     }
-
+   
 
 }

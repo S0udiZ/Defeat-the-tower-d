@@ -11,10 +11,10 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     public GameObject obstacle;
     public int Edamage = 1;
     SpriteRenderer spriteRenderer;
-    public float speed;
 
     public EnemyMove enemymovescript;
     public RoomGen roomgenscript;
+    
    
 
 
@@ -45,14 +45,16 @@ public /*Static?*/ class Enemybase : MonoBehaviour
         StartCoroutine(stun());
     }
 
-    IEnumerator stun()
+    public IEnumerator stun()
     {
-            Debug.Log("uhhghhhg");
-            speed = speed - 10;
-            yield return new WaitForSeconds(1f);
-            speed = speed + 10;
+        Debug.Log("uhhghhhg");
+        rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY| RigidbodyConstraints2D.FreezeRotation;
 
+        Debug.Log("rizzlord" + rb.constraints);
+        yield return new WaitForSeconds(01f);
+        rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
+
     //this thing makes the thing work
     IEnumerator redblink()
     {
