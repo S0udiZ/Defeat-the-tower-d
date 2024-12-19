@@ -2037,8 +2037,8 @@ MonoBehaviour:
   Enemybase: {fileID: 0}
   Speed: 7
   rb: {fileID: 1630808794}
-  hearts: 1000
-  maxHearts: 2
+  hearts: 3
+  maxHearts: 3
   hearttext: {fileID: 660905884}
   immunity: 0
   healthBar: {fileID: 1089413896}
