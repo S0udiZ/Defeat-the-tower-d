@@ -23,6 +23,11 @@ public class RoomSpawn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Obstacle") && allowNextRoom)
+        {
+            Destroy(collision.gameObject);
+        }
+
         if (collision.CompareTag("Player") && allowNextRoom)
         {
             roomGen.NextRoom();
