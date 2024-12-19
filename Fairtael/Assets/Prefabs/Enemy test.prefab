@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c22ddad0af01f640b8378b4ccc70264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movespeed: 3
+  Movespeed: 5
   player: {fileID: 0}
   shooter: 0
   targetPos: {x: 0, y: 0, z: 0}

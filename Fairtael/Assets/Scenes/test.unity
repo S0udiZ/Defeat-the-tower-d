@@ -2040,7 +2040,6 @@ MonoBehaviour:
   hearts: 3
   maxHearts: 3
   hearttext: {fileID: 660905884}
-  immunity: 0
   healthBar: {fileID: 1089413896}
 --- !u!114 &1630808793
 MonoBehaviour:
@@ -2176,7 +2175,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -382850273, guid: e64648cef4e10674e9b439c2b697cd1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2277,6 +2276,7 @@ MonoBehaviour:
   - {fileID: 678532263647076357, guid: 13e0b101e42991e4c926955dea7b81bc, type: 3}
   - {fileID: 678532263647076357, guid: 280ce816c0e083a40ab5b3a6e0785312, type: 3}
   - {fileID: 678532263647076357, guid: cee839926a80f2446b355a21a3a090fc, type: 3}
+  - {fileID: 678532263647076357, guid: 09cab502b6f25d048a9bc7393b670c1e, type: 3}
   enemies: []
   roomSpawnScript: {fileID: 0}
   OldRoom: {fileID: 0}

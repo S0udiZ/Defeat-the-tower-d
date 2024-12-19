@@ -16,11 +16,11 @@ public class playercontroller : MonoBehaviour
     public Rigidbody2D rb;
 
 
-    public int hearts;
-    public int maxHearts;
+    public float hearts;
+    public float maxHearts;
     public TMP_Text hearttext;
 
-    public bool immunity = false;
+    bool immunity = false;
 
     SpriteRenderer spriteRenderer;
 

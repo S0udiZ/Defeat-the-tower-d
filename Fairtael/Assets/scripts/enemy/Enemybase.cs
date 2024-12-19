@@ -47,10 +47,9 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     public IEnumerator stun()
     {
-        Debug.Log("uhhghhhg");
         rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY| RigidbodyConstraints2D.FreezeRotation;
 
-        yield return new WaitForSeconds(01f);
+        yield return new WaitForSeconds(0.1f);
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
