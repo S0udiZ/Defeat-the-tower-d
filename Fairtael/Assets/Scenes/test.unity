@@ -2167,7 +2167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3228cbebd5d899b45ab2024626f78cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: 9705c81bf6efafa4889e26b9421186bb, type: 2}
   Enemybase: {fileID: 0}
   Speed: 7
   rb: {fileID: 1630808794}

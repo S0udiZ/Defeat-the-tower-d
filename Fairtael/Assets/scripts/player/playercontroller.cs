@@ -149,8 +149,6 @@ public class playercontroller : MonoBehaviour
     public void TakeItemLeft()
     {
         itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
-        Debug.Log(itemChoiceScript.gameObject.name);
-        Debug.Log(itemChoiceScript.itemLeft.name);
         inventory.AddItem(itemChoiceScript.itemLeft, 1);
 
 
