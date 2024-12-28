@@ -2168,6 +2168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 9705c81bf6efafa4889e26b9421186bb, type: 2}
+  itemChoiceScript: {fileID: 0}
+  allowNewItem: 1
   Enemybase: {fileID: 0}
   Speed: 7
   rb: {fileID: 1630808794}
@@ -2175,7 +2177,6 @@ MonoBehaviour:
   maxHearts: 3
   hearttext: {fileID: 660905884}
   healthBar: {fileID: 1089413896}
-  itemChoiceScript: {fileID: 0}
 --- !u!114 &1630808793
 MonoBehaviour:
   m_ObjectHideFlags: 0

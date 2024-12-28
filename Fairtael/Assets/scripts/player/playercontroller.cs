@@ -9,6 +9,12 @@ using UnityEngine.UI;
 public class playercontroller : MonoBehaviour
 {
     public InventoryObject inventory;
+
+    public ItemChoiceScript itemChoiceScript;
+
+    public bool allowNewItem = true;
+
+
     public Enemybase Enemybase;
 
 
@@ -28,7 +34,6 @@ public class playercontroller : MonoBehaviour
 
     public GameObject healthBar;
 
-    public ItemChoiceScript itemChoiceScript;
 
     // To avoid flipping too early
     private bool canFlip = true;
@@ -148,26 +153,44 @@ public class playercontroller : MonoBehaviour
     }
     public void TakeItemLeft()
     {
-        itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
-        inventory.AddItem(itemChoiceScript.itemLeft, 1);
+        if (allowNewItem)
+        {
+            itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
+            inventory.AddItem(itemChoiceScript.itemLeft, 1);
 
 
-        GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
-        Transform childTransform = game.gameObject.transform.GetChild(0);
-        itemChoiceScript.ItemChoiceUI = childTransform.gameObject;
-        itemChoiceScript.ItemChoiceUI.SetActive(false);
+            GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
+            Transform childTransform = game.gameObject.transform.GetChild(0);
+            itemChoiceScript.ItemChoiceUI = childTransform.gameObject;
+            itemChoiceScript.ItemChoiceUI.SetActive(false);
+            Time.timeScale = 1;
+            allowNewItem = false;
+        }
+        else
+        {
+            Debug.Log("ur shit.... umm u have taken an item allready");
+        }
     }
     public void TakeItemRight()
     {
-        itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
+        if (allowNewItem)
+        {
+            itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
 
-        inventory.AddItem(itemChoiceScript.itemRight, 1);
+            inventory.AddItem(itemChoiceScript.itemRight, 1);
 
 
-        GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
-        Transform childTransform = game.gameObject.transform.GetChild(0);
-        itemChoiceScript.ItemChoiceUI = childTransform.gameObject;
-        itemChoiceScript.ItemChoiceUI.SetActive(false);
+            GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
+            Transform childTransform = game.gameObject.transform.GetChild(0);
+            itemChoiceScript.ItemChoiceUI = childTransform.gameObject;
+            itemChoiceScript.ItemChoiceUI.SetActive(false);
+            Time.timeScale = 1;
+            allowNewItem = false;
+        }
+        else 
+        {
+            Debug.Log("ur shit.... umm u have taken an item allready");
+        }
     }
 
 

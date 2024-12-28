@@ -9,6 +9,8 @@ public class RoomSpawn : MonoBehaviour
     public RoomGen roomGen;
     public GameObject roomEmpty;
 
+    public GameObject player;
+    public playercontroller playerController;
 
     bool allowNextRoom;
 
@@ -19,9 +21,12 @@ public class RoomSpawn : MonoBehaviour
         roomGen = roomEmpty.GetComponent<RoomGen>();
         visual = GetComponent<SpriteRenderer>();
 
+
+        player = GameObject.FindWithTag("player");
+        playerController = player.GetComponent<playercontroller>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Obstacle") && allowNextRoom)
         {
@@ -33,6 +38,7 @@ public class RoomSpawn : MonoBehaviour
             roomGen.NextRoom();
             allowNextRoom = false;
             visual.enabled = false;
+            //playerController.allowNewItem = true;
         }
     }
 
