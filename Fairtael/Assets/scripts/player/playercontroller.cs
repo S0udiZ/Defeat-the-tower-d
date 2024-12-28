@@ -168,7 +168,7 @@ public class playercontroller : MonoBehaviour
         }
         else
         {
-            Debug.Log("ur shit.... umm u have taken an item allready");
+            Debug.Log("ur shit.... umm u have taken an here item allready");
         }
     }
     public void TakeItemRight()
@@ -189,7 +189,7 @@ public class playercontroller : MonoBehaviour
         }
         else 
         {
-            Debug.Log("ur shit.... umm u have taken an item allready");
+            Debug.Log("ur shit.... umm u have taken an item here allready");
         }
     }
 
