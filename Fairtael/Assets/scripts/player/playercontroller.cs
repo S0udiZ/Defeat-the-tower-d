@@ -28,6 +28,8 @@ public class playercontroller : MonoBehaviour
 
     public GameObject healthBar;
 
+    public ItemChoiceScript itemChoiceScript;
+
     // To avoid flipping too early
     private bool canFlip = true;
 
@@ -144,12 +146,31 @@ public class playercontroller : MonoBehaviour
 
         }
     }
-    public void TakeItem(ItemObject _item)
+    public void TakeItemLeft()
     {
-        if (_item)
-        {
-            inventory.AddItem(_item, 1);
+        itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
+        Debug.Log(itemChoiceScript.gameObject.name);
+        Debug.Log(itemChoiceScript.itemLeft.name);
+        inventory.AddItem(itemChoiceScript.itemLeft, 1);
 
-        }
+
+        GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
+        Transform childTransform = game.gameObject.transform.GetChild(0);
+        itemChoiceScript.ItemChoiceUI = childTransform.gameObject;
+        itemChoiceScript.ItemChoiceUI.SetActive(false);
     }
+    public void TakeItemRight()
+    {
+        itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
+
+        inventory.AddItem(itemChoiceScript.itemRight, 1);
+
+
+        GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
+        Transform childTransform = game.gameObject.transform.GetChild(0);
+        itemChoiceScript.ItemChoiceUI = childTransform.gameObject;
+        itemChoiceScript.ItemChoiceUI.SetActive(false);
+    }
+
+
 }

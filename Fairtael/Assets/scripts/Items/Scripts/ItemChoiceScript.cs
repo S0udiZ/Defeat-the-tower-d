@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class ItemChoiceScript : MonoBehaviour
 {
+    public List<ItemObject> allItems = new List<ItemObject>();
     public ItemObject itemRight;
     public ItemObject itemLeft;
-
+    
 
     public GameObject ItemChoiceUI;
+    public GameObject player;
+    public playercontroller playercontroller;
 
     void Awake()
     {
-        
+        player = GameObject.FindWithTag("Player");
+        playercontroller = player.GetComponent<playercontroller>();
     }
 
     // Update is called once per frame
@@ -40,9 +44,26 @@ public class ItemChoiceScript : MonoBehaviour
 
         ItemChoiceUI.SetActive(true);
 
+        itemLeft = allItems[Random.Range(0,allItems.Count)];
+        itemRight = allItems[Random.Range(0, allItems.Count)];
 
+        Image leftSprite = ItemChoiceUI.gameObject.transform.GetChild(3).gameObject.GetComponent<Image>();
+        TMP_Text leftItemName = ItemChoiceUI.gameObject.transform.GetChild(1).gameObject.GetComponent<TMP_Text>();
+        TMP_Text leftItemDescription = ItemChoiceUI.gameObject.transform.GetChild(2).gameObject.GetComponent<TMP_Text>(); 
 
+        Image rightSprite = ItemChoiceUI.gameObject.transform.GetChild(6).gameObject.GetComponent<Image>(); 
+        TMP_Text rightItemName = ItemChoiceUI.gameObject.transform.GetChild(4).gameObject.GetComponent<TMP_Text>(); 
+        TMP_Text rightItemDescription = ItemChoiceUI.gameObject.transform.GetChild(5).gameObject.GetComponent<TMP_Text>();
+        
+        leftSprite.sprite = itemLeft.sprite;
+        leftItemName.text = itemLeft.name;
+        leftItemDescription.text = itemLeft.itemDescription;
+
+        rightSprite.sprite = itemRight.sprite;
+        rightItemName.text = itemRight.name;
+        rightItemDescription.text = itemRight.itemDescription;
     }
 
-    
+
+
 }
