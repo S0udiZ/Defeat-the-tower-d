@@ -35,6 +35,7 @@ public class playercontroller : MonoBehaviour
     public GameObject healthBar;
 
 
+    public GameObject purchagedUI;
     // To avoid flipping too early
     private bool canFlip = true;
 
@@ -47,6 +48,9 @@ public class playercontroller : MonoBehaviour
 
         hearttext.text = "Hearts: " + hearts;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
+        purchagedUI = game.transform.GetChild(0).GetChild(9).gameObject;
     }
 
     // Update is called once per frame
@@ -158,6 +162,7 @@ public class playercontroller : MonoBehaviour
             itemChoiceScript = GameObject.FindWithTag("itemBook").GetComponent<ItemChoiceScript>();
             inventory.AddItem(itemChoiceScript.itemLeft, 1);
 
+            purchagedUI.SetActive(true);
 
             GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
             Transform childTransform = game.gameObject.transform.GetChild(0);
@@ -179,6 +184,7 @@ public class playercontroller : MonoBehaviour
 
             inventory.AddItem(itemChoiceScript.itemRight, 1);
 
+            purchagedUI.SetActive(true);
 
             GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
             Transform childTransform = game.gameObject.transform.GetChild(0);
@@ -186,6 +192,7 @@ public class playercontroller : MonoBehaviour
             itemChoiceScript.ItemChoiceUI.SetActive(false);
             Time.timeScale = 1;
             allowNewItem = false;
+
         }
         else 
         {

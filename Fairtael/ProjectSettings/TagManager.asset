@@ -14,6 +14,7 @@ TagManager:
   - ItemBookUI
   - ShooterPath
   - itemBook
+  - purchagedUI
   layers:
   - Default
   - TransparentFX

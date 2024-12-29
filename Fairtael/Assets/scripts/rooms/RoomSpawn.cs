@@ -22,7 +22,7 @@ public class RoomSpawn : MonoBehaviour
         visual = GetComponent<SpriteRenderer>();
 
 
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
         playerController = player.GetComponent<playercontroller>();
     }
 
@@ -38,7 +38,8 @@ public class RoomSpawn : MonoBehaviour
             roomGen.NextRoom();
             allowNextRoom = false;
             visual.enabled = false;
-            //playerController.allowNewItem = true;
+            playerController.allowNewItem = true;
+            playerController.purchagedUI.SetActive(false);
         }
     }
 
