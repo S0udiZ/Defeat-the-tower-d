@@ -199,6 +199,10 @@ public class playercontroller : MonoBehaviour
             Debug.Log("ur shit.... umm u have taken an item here allready");
         }
     }
+    private void OnApplicationQuit()
+    {
+        inventory.items.Clear();
+    }
 
 
 }
