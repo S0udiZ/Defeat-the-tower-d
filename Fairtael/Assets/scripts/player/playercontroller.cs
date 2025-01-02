@@ -106,6 +106,7 @@ public class playercontroller : MonoBehaviour
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
+            inventory.items.Clear();
         }
 
         //theres probably a better way to do this
