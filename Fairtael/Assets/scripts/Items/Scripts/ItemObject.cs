@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public enum ItemType
@@ -10,6 +11,8 @@ public enum ItemType
 }
 public abstract class ItemObject : ScriptableObject
 {
+    public GameObject prefab; 
+
     public Sprite sprite;
 
     public ItemType type;

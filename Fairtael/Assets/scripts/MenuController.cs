@@ -8,6 +8,9 @@ public class MenuController : MonoBehaviour
     public GameObject PauseMenu;
     public bool pauseMenuUp = false;
 
+    public GameObject InventoryMenu;
+    public bool inventoryMenuUp = false;
+
     public GameObject MainMenu;
     public GameObject SettingsMenu;
 
@@ -22,6 +25,7 @@ public class MenuController : MonoBehaviour
 
         {
             PauseMenu.SetActive(true);
+            InventoryMenu.SetActive(false);
             pauseMenuUp = true;
             Time.timeScale = 0f;
         }
@@ -32,6 +36,21 @@ public class MenuController : MonoBehaviour
             Time.timeScale = 1f;
         }
 
+
+        //inventory
+        if (Input.GetKeyDown(KeyCode.E) && !inventoryMenuUp && !pauseMenuUp && SceneManager.GetActiveScene().buildIndex != 0)
+
+        {
+            InventoryMenu.SetActive(true);
+            inventoryMenuUp = true;
+            //Time.timeScale = 0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && inventoryMenuUp && SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            InventoryMenu.SetActive(false);
+            inventoryMenuUp = false;
+            //Time.timeScale = 1f;
+        }
 
     }
 
