@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 public class InventoryObject : ScriptableObject
 {
     public List<Inventoryslot> items = new List<Inventoryslot>();
+
+
     public void AddItem(ItemObject _item, int _amount)
     {
         bool hasItem = false;
