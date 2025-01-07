@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+
+    public playercontroller playercontroller;
+
     public GameObject PauseMenu;
     public bool pauseMenuUp = false;
 
@@ -15,6 +18,10 @@ public class MenuController : MonoBehaviour
     public GameObject SettingsMenu;
 
     float LevelMenuOpen;
+    void Start()
+    {
+        playercontroller = GameObject.FindWithTag("Player").GetComponent<playercontroller>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -63,6 +70,7 @@ public class MenuController : MonoBehaviour
     public void ReloadSceneButton()
     {
         Time.timeScale = 1f;
+        playercontroller.inventory.items.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     //this shi is both dumbass
