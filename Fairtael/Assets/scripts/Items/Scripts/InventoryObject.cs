@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory/inventory")]
 public class InventoryObject : ScriptableObject
 {
+    public ItemBuffs Buffs;
     public List<Inventoryslot> items = new List<Inventoryslot>();
 
 
@@ -17,6 +18,7 @@ public class InventoryObject : ScriptableObject
             if (items[i].item == _item) 
             {   
                 items[i].AddAmount(_amount);
+                //Buffs.ChangeStats(damageChange, firerateChange, rangeChange, walkspeed, maxHearts, hearts);
                 hasItem = true;
                 break;
             }

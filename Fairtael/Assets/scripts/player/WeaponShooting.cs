@@ -33,6 +33,7 @@ public class WeaponShoot : MonoBehaviour
 
     public bool justFired = false;
 
+    bool flipSprite;
 
     public bool usingdirShooting = false;
 
@@ -74,10 +75,10 @@ public class WeaponShoot : MonoBehaviour
         {
             if (!justFired)
             {
-                if (Input.GetKey(KeyCode.UpArrow)) shootdir = Vector2.up;
-                else if (Input.GetKey(KeyCode.DownArrow)) shootdir = Vector2.down;
-                else if (Input.GetKey(KeyCode.LeftArrow)) shootdir = Vector2.left;
-                else if (Input.GetKey(KeyCode.RightArrow)) shootdir = Vector2.right;
+                if (Input.GetKey(KeyCode.UpArrow)) { shootdir = Vector2.up; flipSprite = false; }
+                else if (Input.GetKey(KeyCode.DownArrow)) { shootdir = Vector2.down; flipSprite = false; }
+                else if (Input.GetKey(KeyCode.LeftArrow)) { shootdir = Vector2.left; flipSprite = false; }
+                else if (Input.GetKey(KeyCode.RightArrow))  { shootdir = Vector2.right; flipSprite = true; }
 
                 if (shootdir != Vector2.zero)
                 {
@@ -123,7 +124,7 @@ public class WeaponShoot : MonoBehaviour
             else if (!usingdirShooting)
             {
                 // Calculate the angle from the last movement direction
-                float angle = Mathf.Atan2(shootdir.y, shootdir.x) * Mathf.Rad2Deg;
+                float angle = Mathf.Atan2(-shootdir.y, -shootdir.x) * Mathf.Rad2Deg;
 
                 // Create a rotation quaternion based on this angle
                 angleFixed = Quaternion.Euler(0, 0, angle);
@@ -135,7 +136,7 @@ public class WeaponShoot : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
 
             // Attach a script to the bullet to handle movement and raycast and cool shit
-            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage, life);
+            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage, life, flipSprite);
         }
         IEnumerator WaitAndAllowShoot(float tTime)
         {
@@ -152,10 +153,14 @@ public class WeaponShoot : MonoBehaviour
         private LayerMask targetLayer;
         private Vector2 previousPosition;
         public Enemybase enemybase;
+        
+        public SpriteRenderer spriteRenderer;
 
         // Initialize the bullet's speed and target layer
-        public void Initialize(float speed, LayerMask layer, float newdamage, float tlife)
+        public void Initialize(float speed, LayerMask layer, float newdamage, float tlife, bool tflipSprite)
         {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipY = tflipSprite;
             bulletSpeed = speed;
             targetLayer = layer;
             damage = newdamage;
@@ -203,7 +208,7 @@ public class WeaponShoot : MonoBehaviour
             previousPosition = currentPosition;
 
             // Move the bullet forward
-            transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+            transform.Translate(Vector2.left * bulletSpeed * Time.deltaTime);
         }
         IEnumerator LifeTime()
         {
