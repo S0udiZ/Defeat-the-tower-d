@@ -11,6 +11,18 @@ public enum ItemType
 }
 public abstract class ItemObject : ScriptableObject
 {
+
+    public float damageChange;
+    public float firerateChange;
+    public float rangeChange;
+
+    public float acuraty;
+
+    public float walkspeed;
+
+    public float maxHearts;
+    public float hearts;
+
     public GameObject prefab; 
 
     public Sprite sprite;

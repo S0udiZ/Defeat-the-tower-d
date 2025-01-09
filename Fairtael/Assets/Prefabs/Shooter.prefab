@@ -213,7 +213,6 @@ MonoBehaviour:
   enemy: {fileID: 8025922464453891962}
   obstacle: {fileID: 3500700735517763395, guid: 218e1d1d2a8f2c740a7088688cf99d20, type: 3}
   Edamage: 1
-  speed: 2
   enemymovescript: {fileID: 0}
   roomgenscript: {fileID: 0}
 --- !u!114 &1503041721860054793
@@ -316,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5072785157392898520}
   bulletSpawnPoint: {fileID: 7842724902181142332}
-  bulletPrefab: {fileID: 572995669589774358, guid: 771fbf8ca59b3a44381917b640dce093, type: 3}
+  bulletPrefab: {fileID: 572995669589774358, guid: 9b8b3eddc75b1e94aa39a4630ae723a7, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 72

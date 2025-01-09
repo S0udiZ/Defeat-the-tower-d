@@ -56,7 +56,7 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
+        
         healthBar.GetComponent<Image>().fillAmount = hearts / maxHearts;
 
         // Get current animation state info
@@ -113,7 +113,11 @@ public class playercontroller : MonoBehaviour
         hearttext.text = "Hearts: " + hearts;
 
     }
-
+    public void ChangeHearts(float tMaxHearts, float tHearts)
+    {
+        maxHearts += tMaxHearts;
+        hearts += tHearts;
+    }
     IEnumerator unimmunity()
     {
 

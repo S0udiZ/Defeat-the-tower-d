@@ -7,15 +7,6 @@ public class DefaultObject : ItemObject
 {
     //add stats here
 
-    public float damageChange;
-    public float firerateChange;
-    public float rangeChange;
-
-    public float walkspeed;
-
-    public float maxHearts;
-    public float hearts;
-    
 
     public void Awake()
     {

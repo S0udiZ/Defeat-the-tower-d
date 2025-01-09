@@ -19,7 +19,7 @@ public class Enemyshooting : MonoBehaviour
     public LayerMask targetLayer;
 
     // Bullet speed
-    float bulletSpeed = 15f;
+    float bulletSpeed = 12f;
 
     public float fireRate = 4;
 
@@ -98,7 +98,7 @@ public class Enemyshooting : MonoBehaviour
         //why the fyuck does it need to bee a quaternion - ahhhh:-(
         quaternion angleFixed = Quaternion.Euler(0, 0, angle);
 
-
+        bulletPrefab.transform.rotation = angleFixed;
 
         // Spawn the bullet object
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);

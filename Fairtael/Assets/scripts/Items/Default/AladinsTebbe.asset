@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
-  m_Name: Lil homie
+  m_Name: AladinsTebbe
   m_EditorClassIdentifier: 
-  damageChange: 2
-  firerateChange: -2
+  damageChange: 0
+  firerateChange: 0
   rangeChange: 0
-  acuraty: 0
-  walkspeed: 0
+  acuraty: 1
+  walkspeed: 1
   maxHearts: 0
   hearts: 0
-  prefab: {fileID: 4454694492238605148, guid: ba439acf2e493b94d8ca7467f36dcae8, type: 3}
-  sprite: {fileID: -1259295092, guid: e64648cef4e10674e9b439c2b697cd1e, type: 3}
+  prefab: {fileID: 4993178469000998571, guid: 6a70e56ae58f99848b8bf2b26ffa3fff, type: 3}
+  sprite: {fileID: 21300000, guid: 77a89bfa264987b44afdcb47fcfb012f, type: 3}
   type: 2
-  itemDescription: just guy_7
+  itemDescription: aladins tebbe;   +Speed -Acc

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
   m_Name: Square
   m_EditorClassIdentifier: 
+  damageChange: 0
+  firerateChange: 14
+  rangeChange: 0
+  acuraty: -2
+  walkspeed: 20
+  maxHearts: 5
+  hearts: 0
   prefab: {fileID: 4993178469000998571, guid: 58d6bdf7e35aaed46a0019478b3ec880, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   type: 2

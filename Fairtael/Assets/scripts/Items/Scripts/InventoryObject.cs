@@ -16,9 +16,11 @@ public class InventoryObject : ScriptableObject
         for (int i = 0; i < items.Count; i++)
         {
             if (items[i].item == _item) 
-            {   
+            {
+                Debug.LogWarning("so not sigma");
                 items[i].AddAmount(_amount);
-                //Buffs.ChangeStats(damageChange, firerateChange, rangeChange, walkspeed, maxHearts, hearts);
+                Buffs.ChangeStats(items[i].item.acuraty, items[i].item.damageChange, items[i].item.firerateChange, items[i].item.rangeChange,  items[i].item.walkspeed, items[i].item.maxHearts, items[i].item.hearts);
+                Debug.LogWarning("acuraty    "+items[i].item.acuraty);
                 hasItem = true;
                 break;
             }

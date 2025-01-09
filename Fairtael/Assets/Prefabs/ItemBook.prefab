@@ -146,6 +146,7 @@ MonoBehaviour:
   allItems:
   - {fileID: 11400000, guid: ade4577c75e4ba14a97f1b6d28a2424b, type: 2}
   - {fileID: 11400000, guid: c41f247f40003da4ab1a14e8bd85dcf0, type: 2}
+  - {fileID: 11400000, guid: bf31c397504a28244b521e0ed3c6c69c, type: 2}
   itemRight: {fileID: 0}
   itemLeft: {fileID: 0}
   ItemChoiceUI: {fileID: 0}
