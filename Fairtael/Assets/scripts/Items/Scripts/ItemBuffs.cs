@@ -12,7 +12,7 @@ public class ItemBuffs : MonoBehaviour
     }
 
 
-    public float acuraty;  //ass
+    public float acuraty;  
     public float damageChange;
     public float firerateChange;
     public float rangeChange;
