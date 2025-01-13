@@ -17,6 +17,8 @@ public class playercontroller : MonoBehaviour
 
     public Enemybase Enemybase;
 
+    public GameObject deathUI;
+
 
     public float Speed = 10;
     public Rigidbody2D rb;
@@ -42,6 +44,9 @@ public class playercontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+
+
         rb = GetComponent<Rigidbody2D>();
 
         ani = GetComponent<Animator>();
@@ -104,8 +109,14 @@ public class playercontroller : MonoBehaviour
         //title screen or whatever else<!>
         if (hearts <= 0)
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            //Scene scene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(scene.name);
+
+
+            deathUI.SetActive(true);
+            this.gameObject.transform.rotation = new Quaternion(0,0,0,0);
+            Time.timeScale = 0f;
+
             inventory.items.Clear();
         }
 
