@@ -5,12 +5,15 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEditor;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class playercontroller : MonoBehaviour
 {
     public InventoryObject inventory;
 
     public ItemChoiceScript itemChoiceScript;
+
+    public RoomGen roomGen;
 
     public bool allowNewItem = true;
 
@@ -114,7 +117,9 @@ public class playercontroller : MonoBehaviour
 
 
             deathUI.SetActive(true);
-            this.gameObject.transform.rotation = new Quaternion(0,0,0,0);
+            TMP_Text txt = deathUI.gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
+            txt.text = "Floors Cleared:  "+ roomGen.roomNumber;
+            this.gameObject.transform.Rotate(0, 0, 90);
             Time.timeScale = 0f;
 
             inventory.items.Clear();

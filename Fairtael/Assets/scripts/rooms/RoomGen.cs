@@ -27,6 +27,8 @@ public class RoomGen : MonoBehaviour
 
     public TMP_Text chanceText;
 
+    public int roomNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +58,7 @@ public class RoomGen : MonoBehaviour
 
     public void NextRoom()
     {
+        roomNumber++;
         if (ItemChance >= Random.Range(1, 101))
         {
             if (OldRoom != null) Destroy(OldRoom);

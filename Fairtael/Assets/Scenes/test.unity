@@ -1079,9 +1079,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760178626}
+  - {fileID: 213371093}
   - {fileID: 924058628}
   - {fileID: 1378563899}
-  - {fileID: 213371093}
   - {fileID: 1998149882}
   - {fileID: 1134882175}
   m_Father: {fileID: 428727359}
@@ -3320,6 +3320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 9705c81bf6efafa4889e26b9421186bb, type: 2}
   itemChoiceScript: {fileID: 0}
+  roomGen: {fileID: 1648542155}
   allowNewItem: 1
   Enemybase: {fileID: 0}
   deathUI: {fileID: 465614563}
@@ -3594,6 +3595,7 @@ MonoBehaviour:
   playerSpawn: {fileID: 0}
   ItemChance: 0
   chanceText: {fileID: 566307664}
+  roomNumber: 0
 --- !u!1001 &1662065456
 PrefabInstance:
   m_ObjectHideFlags: 0
