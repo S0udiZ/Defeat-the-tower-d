@@ -29,9 +29,14 @@ public class RoomGen : MonoBehaviour
 
     public int roomNumber;
 
+    AudioManage audioManager;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         enemies.Add(this.gameObject);
 
         /*
@@ -58,6 +63,7 @@ public class RoomGen : MonoBehaviour
 
     public void NextRoom()
     {
+        audioManager.PlaySFX(audioManager.ladder);
         roomNumber++;
         if (ItemChance >= Random.Range(1, 101))
         {
@@ -83,6 +89,7 @@ public class RoomGen : MonoBehaviour
 
             else if(OldRoom == null)
             {
+
                 OldRoom = Instantiate(roomList[1]);
                 GameObject[] dumbasswalls = GameObject.FindGameObjectsWithTag("Obstacle");
 

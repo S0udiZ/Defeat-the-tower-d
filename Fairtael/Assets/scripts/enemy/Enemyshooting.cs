@@ -29,6 +29,8 @@ public class Enemyshooting : MonoBehaviour
 
     public GameObject player;
 
+    AudioManage audioManager;
+
 
     //public bool usingdirShooting = false;
 
@@ -41,6 +43,7 @@ public class Enemyshooting : MonoBehaviour
 
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         StartCoroutine(shootdelay());
     }
@@ -105,6 +108,11 @@ public class Enemyshooting : MonoBehaviour
 
         // Attach a script to the bullet to handle movement and raycast and cool shit
         bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage);
+
+        //plays the sound effect
+        audioManager.PlaySFX(audioManager.enemyShoot);
+
+        //starts the delay again
         StartCoroutine(shootdelay());
         }
 }

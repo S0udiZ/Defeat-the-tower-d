@@ -14,8 +14,11 @@ public class ItemChoiceScript : MonoBehaviour
     public GameObject player;
     public playercontroller playercontroller;
 
+    AudioManage audioManager;
+
     void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         player = GameObject.FindWithTag("Player");
         playercontroller = player.GetComponent<playercontroller>();
     }
@@ -36,6 +39,7 @@ public class ItemChoiceScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        audioManager.PlaySFX(audioManager.pedestal);
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
         Transform childTransform = game.gameObject.transform.GetChild(0);
         ItemChoiceUI = childTransform.gameObject;

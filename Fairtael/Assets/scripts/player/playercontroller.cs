@@ -39,6 +39,8 @@ public class playercontroller : MonoBehaviour
 
     public GameObject healthBar;
 
+    AudioManage audioManager;
+
 
     public GameObject purchagedUI;
     // To avoid flipping too early
@@ -47,8 +49,8 @@ public class playercontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
 
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -110,17 +112,18 @@ public class playercontroller : MonoBehaviour
 
         //<!> This part reloads the scene, it needs to be changed when in the actual game to load the death screen
         //title screen or whatever else<!>
-        if (hearts <= 0)
+        if (hearts <= 0 && hearts > -10000)
         {
             //Scene scene = SceneManager.GetActiveScene();
             //SceneManager.LoadScene(scene.name);
 
-
+            audioManager.PlaySFX(audioManager.playerDeath);
             deathUI.SetActive(true);
             TMP_Text txt = deathUI.gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
             txt.text = "Floors Cleared:  "+ roomGen.roomNumber;
             this.gameObject.transform.Rotate(0, 0, 90);
             Time.timeScale = 0f;
+            hearts = -10000;
 
             inventory.items.Clear();
         }
@@ -143,6 +146,7 @@ public class playercontroller : MonoBehaviour
 
     IEnumerator redblink()
     {
+        audioManager.PlaySFX(audioManager.playerHit);
         spriteRenderer.color = new Color(255, 0, 0, 1);
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = new Color(255, 255, 255, 1);
@@ -191,6 +195,7 @@ public class playercontroller : MonoBehaviour
             itemChoiceScript.ItemChoiceUI.SetActive(false);
             Time.timeScale = 1;
             allowNewItem = false;
+            audioManager.PlaySFX(audioManager.itemObtain);
         }
         else
         {
@@ -213,6 +218,7 @@ public class playercontroller : MonoBehaviour
             itemChoiceScript.ItemChoiceUI.SetActive(false);
             Time.timeScale = 1;
             allowNewItem = false;
+            audioManager.PlaySFX(audioManager.itemObtain);
 
         }
         else 

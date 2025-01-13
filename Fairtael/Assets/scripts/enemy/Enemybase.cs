@@ -14,12 +14,15 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     public EnemyMove enemymovescript;
     public RoomGen roomgenscript;
+
+    AudioManage audioManager;
     
    
 
 
     void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         GameObject roomGenObj = GameObject.FindWithTag("roomGen");
         roomgenscript = roomGenObj.GetComponent<RoomGen>();
 
@@ -34,12 +37,14 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     {
         if (hp <= 0)
         {
+            audioManager.PlaySFX(audioManager.enemyDeath);
             Destroy(enemy);
         }
 
     }
     public void TakeDamage(float damage)
     {
+        audioManager.PlaySFX(audioManager.enemyHit);
         hp -= damage;
         StartCoroutine(redblink());
         StartCoroutine(stun());

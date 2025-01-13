@@ -15,6 +15,7 @@ TagManager:
   - ShooterPath
   - itemBook
   - purchagedUI
+  - Audio
   layers:
   - Default
   - TransparentFX

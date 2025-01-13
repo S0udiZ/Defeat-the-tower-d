@@ -37,6 +37,7 @@ public class WeaponShoot : MonoBehaviour
 
     public bool usingdirShooting = false;
 
+    AudioManage audioManager;
 
     private Vector2 lastMovementDirection;
     quaternion oldRotation;
@@ -46,6 +47,7 @@ public class WeaponShoot : MonoBehaviour
 
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -83,6 +85,7 @@ public class WeaponShoot : MonoBehaviour
                 if (shootdir != Vector2.zero)
                 {
                     justFired = true;
+                    audioManager.PlaySFX(audioManager.playerShoot);
                     Shoot();
                     StartCoroutine(WaitAndAllowShoot(fireRate));
                 }
