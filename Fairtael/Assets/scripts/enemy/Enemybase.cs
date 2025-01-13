@@ -26,7 +26,9 @@ public /*Static?*/ class Enemybase : MonoBehaviour
         GameObject roomGenObj = GameObject.FindWithTag("roomGen");
         roomgenscript = roomGenObj.GetComponent<RoomGen>();
 
-        if (roomgenscript != null && roomgenscript.enemies != null) roomgenscript.enemies.Add(this.gameObject);
+        if (this.gameObject.CompareTag("enemyObs"))
+        { }
+        else if (roomgenscript != null && roomgenscript.enemies != null) roomgenscript.enemies.Add(this.gameObject);
         
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

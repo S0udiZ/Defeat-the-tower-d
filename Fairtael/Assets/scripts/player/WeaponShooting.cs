@@ -188,7 +188,7 @@ public class WeaponShoot : MonoBehaviour
             {
                 // Debug log to show what was hit
                 Debug.Log("Hit: " + hit.collider.name);
-                if (hit.collider.CompareTag("enemy"))
+                if (hit.collider.CompareTag("enemy") || hit.collider.CompareTag("enemyObs"))
                 {
                     enemybase = hit.collider.gameObject.GetComponent<Enemybase>();
                     if (enemybase != null)
