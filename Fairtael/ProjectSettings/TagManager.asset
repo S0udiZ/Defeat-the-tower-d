@@ -16,6 +16,7 @@ TagManager:
   - itemBook
   - purchagedUI
   - Audio
+  - enemyObs
   layers:
   - Default
   - TransparentFX

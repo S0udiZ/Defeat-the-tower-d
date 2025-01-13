@@ -18,6 +18,7 @@ public class AudioManage : MonoBehaviour
     public AudioClip itemObtain;
     public AudioClip pedestal;
     public AudioClip ladder;
+    public AudioClip click;
 
     private void Start()
     {
