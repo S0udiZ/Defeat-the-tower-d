@@ -64,6 +64,9 @@ public class RoomGen : MonoBehaviour
     public void NextRoom()
     {
         audioManager.PlaySFX(audioManager.ladder);
+        //player = GameObject.FindWithTag("Player");
+        //playercontroller playerc = player.GetComponent<playercontroller>();
+        //playerc.allowNewItem = true;
         roomNumber++;
         if (ItemChance >= Random.Range(1, 101))
         {

@@ -31,6 +31,7 @@ public class Enemyshooting : MonoBehaviour
 
     AudioManage audioManager;
 
+    Animator ani;
 
     //public bool usingdirShooting = false;
 
@@ -45,7 +46,9 @@ public class Enemyshooting : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        ani = GetComponent<Animator>();
         StartCoroutine(shootdelay());
+
     }
 
     void Update()
@@ -90,6 +93,8 @@ public class Enemyshooting : MonoBehaviour
         IEnumerator shootdelay()
         {
         yield return new WaitForSeconds(fireRate);
+        ani.SetTrigger("Shoot");
+        yield return new WaitForSeconds(0.25f);
         player = GameObject.FindWithTag("Player");
 
         // Calculate the direction from the player to the mouse

@@ -197,6 +197,8 @@ public class playercontroller : MonoBehaviour
             Time.timeScale = 1;
             allowNewItem = false;
             audioManager.PlaySFX(audioManager.itemObtain);
+
+            Debug.LogWarning("dd");
         }
         else
         {
