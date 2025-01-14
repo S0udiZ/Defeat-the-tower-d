@@ -92,10 +92,18 @@ public class Enemyshooting : MonoBehaviour
     //this Enumerator just makses a cooldown with "fireRate" and puts in in front of the entire shoot part of the script
         IEnumerator shootdelay()
         {
-        yield return new WaitForSeconds(fireRate);
-        ani.SetTrigger("Shoot");
-        yield return new WaitForSeconds(0.25f);
         player = GameObject.FindWithTag("Player");
+        yield return new WaitForSeconds(fireRate);
+
+        // Calculate the direction from the player to the mouse
+        Vector3 aniDirFlipW = player.gameObject.transform.position - bulletSpawnPoint.transform.position;
+
+        if (aniDirFlipW.x < 0){this.gameObject.GetComponent<SpriteRenderer>().flipX = true;}
+
+        else{this.gameObject.GetComponent<SpriteRenderer>().flipX = false;}
+
+        ani.SetTrigger("Shoot");
+        yield return new WaitForSeconds(0.3f);
 
         // Calculate the direction from the player to the mouse
         Vector3 direction = player.gameObject.transform.position - bulletSpawnPoint.transform.position;

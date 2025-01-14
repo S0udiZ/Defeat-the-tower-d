@@ -66,12 +66,14 @@ public class MenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
     public void ReloadSceneButton()
     {
         Time.timeScale = 1f;
         playercontroller.inventory.items.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
     //this shi is both dumbass
     public void QuitButton()

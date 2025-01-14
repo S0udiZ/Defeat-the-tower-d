@@ -212,7 +212,7 @@ MonoBehaviour:
   rb: {fileID: 5072785157392898520}
   hp: 3
   enemy: {fileID: 8025922464453891962}
-  obstacle: {fileID: 4172112716031209849, guid: 5b896770d4b325042bfab1a4a0aa6548, type: 3}
+  obstacle: {fileID: 4172112716031209849, guid: afcb53c73f255e54ca0ef5f893b10c8c, type: 3}
   Edamage: 1
   enemymovescript: {fileID: 0}
   roomgenscript: {fileID: 0}
