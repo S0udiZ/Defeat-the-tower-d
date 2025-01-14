@@ -92,13 +92,17 @@ public class RoomGen : MonoBehaviour
 
                 OldRoom = Instantiate(roomList[1]);
                 GameObject[] dumbasswalls = GameObject.FindGameObjectsWithTag("Obstacle");
-
+                GameObject[] dumbasswalls2 = GameObject.FindGameObjectsWithTag("enemyObs");
 
                 for (int i = 0; i < dumbasswalls.Length; i++) 
                 {
                     Destroy(dumbasswalls[i]);
                 }
-                
+                for (int i = 0; i < dumbasswalls2.Length; i++)
+                {
+                    Destroy(dumbasswalls2[i]);
+                }
+
 
             }
             ItemChance += Random.Range(1, 16);

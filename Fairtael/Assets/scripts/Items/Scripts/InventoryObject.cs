@@ -18,6 +18,7 @@ public class InventoryObject : ScriptableObject
             if (items[i].item == _item) 
             {
                 Debug.LogWarning("so not sigma");
+                Debug.LogWarning("acuraty   " + items[i].item.acuraty);
                 items[i].AddAmount(_amount);
                 Buffs.ChangeStats(items[i].item.acuraty, items[i].item.damageChange, items[i].item.firerateChange, items[i].item.rangeChange,  items[i].item.walkspeed, items[i].item.maxHearts, items[i].item.hearts);
                 Debug.LogWarning("acuraty    "+items[i].item.acuraty);

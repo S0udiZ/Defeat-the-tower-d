@@ -19,7 +19,7 @@ public class Enemyshooting : MonoBehaviour
     public LayerMask targetLayer;
 
     // Bullet speed
-    float bulletSpeed = 12f;
+    float bulletSpeed = 7f;
 
     public float fireRate = 4;
 
@@ -124,9 +124,10 @@ public class Enemyshooting : MonoBehaviour
         private LayerMask targetLayer;
         private Vector2 previousPosition;
         public playercontroller playerController;
+        public Enemybase enemybase;
 
-        // Initialize the bullet's speed and target layer
-        public void Initialize(float speed, LayerMask layer, int newdamage)
+    // Initialize the bullet's speed and target layer
+    public void Initialize(float speed, LayerMask layer, int newdamage)
         {
             bulletSpeed = speed;
             targetLayer = layer;
@@ -148,14 +149,20 @@ public class Enemyshooting : MonoBehaviour
             // Check if the Raycast hits something
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("Player"))
+                if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("enemyObs"))
                 {
+                    enemybase = hit.collider.gameObject.GetComponent<Enemybase>();
+                    if (enemybase != null)
+                    {
+                        enemybase.TakeDamage(damage);
+                    }
                     playerController = hit.collider.gameObject.GetComponent<playercontroller>();
                     if (playerController != null)
                     {
                         playerController.TakeDamage(damage);
                     }
-                }
+
+            }
 
                 // Destroy the bullet
                 Destroy(gameObject);

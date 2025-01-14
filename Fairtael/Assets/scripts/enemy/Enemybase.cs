@@ -54,10 +54,13 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     public IEnumerator stun()
     {
-        rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY| RigidbodyConstraints2D.FreezeRotation;
+        if (!this.gameObject.CompareTag("enemyObs"))
+        {
+            rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
-        yield return new WaitForSeconds(0.1f);
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            yield return new WaitForSeconds(0.1f);
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
     }
 
     //this thing makes the thing work

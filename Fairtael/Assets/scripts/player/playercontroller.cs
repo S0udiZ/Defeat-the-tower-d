@@ -17,6 +17,7 @@ public class playercontroller : MonoBehaviour
 
     public bool allowNewItem = true;
 
+    bool hasDied = false;
 
     public Enemybase Enemybase;
 
@@ -110,20 +111,20 @@ public class playercontroller : MonoBehaviour
         }
 
 
-        //<!> This part reloads the scene, it needs to be changed when in the actual game to load the death screen
-        //title screen or whatever else<!>
-        if (hearts <= 0 && hearts > -10000)
+        if (hearts <= 0)
         {
-            //Scene scene = SceneManager.GetActiveScene();
-            //SceneManager.LoadScene(scene.name);
+            if (!hasDied) 
+            {
+                audioManager.PlaySFX(audioManager.playerDeath);
+                this.gameObject.transform.Rotate(0, 0, 90);
+                hasDied = true;
+            }
 
-            audioManager.PlaySFX(audioManager.playerDeath);
             deathUI.SetActive(true);
             TMP_Text txt = deathUI.gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
             txt.text = "Floors Cleared:  "+ roomGen.roomNumber;
-            this.gameObject.transform.Rotate(0, 0, 90);
+
             Time.timeScale = 0f;
-            hearts = -10000;
 
             inventory.items.Clear();
         }
