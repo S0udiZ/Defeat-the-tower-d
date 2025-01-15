@@ -92,7 +92,7 @@ public class RoomGen : MonoBehaviour
 
             else if(OldRoom == null)
             {
-
+                Time.timeScale = 1;
                 OldRoom = Instantiate(roomList[1]);
                 GameObject[] dumbasswalls = GameObject.FindGameObjectsWithTag("Obstacle");
                 GameObject[] dumbasswalls2 = GameObject.FindGameObjectsWithTag("enemyObs");
