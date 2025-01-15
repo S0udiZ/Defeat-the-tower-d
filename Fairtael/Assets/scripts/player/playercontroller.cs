@@ -23,6 +23,7 @@ public class playercontroller : MonoBehaviour
 
     public GameObject deathUI;
 
+    public GameObject playerUI;
 
     public float Speed = 10;
     public Rigidbody2D rb;
@@ -36,9 +37,13 @@ public class playercontroller : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
+    public GameObject FullHeart;
+    public GameObject HollowHeart;
+    public Vector3 heartPlacement;
+
     Animator ani;
 
-    public GameObject healthBar;
+    //public GameObject healthBar;  
 
     AudioManage audioManager;
 
@@ -62,14 +67,18 @@ public class playercontroller : MonoBehaviour
 
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
         purchagedUI = game.transform.GetChild(0).GetChild(9).gameObject;
+
+        Vector3 placement = heartPlacement;
+        for (int i = 0; i < hearts; i++)
+        {
+            placement = placement + new Vector3(20, 0, 0);
+            Instantiate(FullHeart, placement, Quaternion.identity, playerUI.transform);
+        }
     }
 
     // Update is called once per frame
     private void Update()
     {
-        
-        healthBar.GetComponent<Image>().fillAmount = hearts / maxHearts;
-
         // Get current animation state info
         AnimatorStateInfo stateInfo = ani.GetCurrentAnimatorStateInfo(0);
 
