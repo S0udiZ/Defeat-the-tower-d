@@ -31,15 +31,12 @@ public class playercontroller : MonoBehaviour
 
     public float hearts;
     public float maxHearts;
+    public Image[] heatsImg;
     public TMP_Text hearttext;
 
     bool immunity = false;
 
     SpriteRenderer spriteRenderer;
-
-    public GameObject FullHeart;
-    public GameObject HollowHeart;
-
 
     Animator ani;
 
