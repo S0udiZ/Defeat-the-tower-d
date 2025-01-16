@@ -7,19 +7,18 @@ public class ObstacleCheck : MonoBehaviour
 {
     public GameObject[] Obstacles;
     public GameObject[] OldObstacles;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] EnemyObstacles;
+    public GameObject[] EnemyOldObstacles;
 
     // Update is called once per frame
     void Update()
     {
         Obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
-        if (Obstacles.Length != OldObstacles.Length)
+        EnemyObstacles = GameObject.FindGameObjectsWithTag("enemyObs");
+        if (Obstacles.Length != OldObstacles.Length || EnemyObstacles.Length != EnemyOldObstacles.Length)
         {
             OldObstacles = Obstacles;
+            EnemyOldObstacles = EnemyObstacles;
 
             AstarPath.active.Scan();
         }
