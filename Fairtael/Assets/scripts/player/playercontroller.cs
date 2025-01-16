@@ -51,6 +51,9 @@ public class playercontroller : MonoBehaviour
     // To avoid flipping too early
     private bool canFlip = true;
 
+
+    public ItemBuffs Buffs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +70,9 @@ public class playercontroller : MonoBehaviour
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
         purchagedUI = game.transform.GetChild(0).GetChild(9).gameObject;
 
-        
+        Buffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
+
+
     }
 
     // Update is called once per frame
@@ -93,7 +98,7 @@ public class playercontroller : MonoBehaviour
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
         direction = Vector3.ClampMagnitude(direction, 1);
-        direction *= Speed;
+        direction *= Speed*Buffs.walkspeed;
         rb.velocity = direction;
 
         //hella bad animation code but it works sooooo   :-)

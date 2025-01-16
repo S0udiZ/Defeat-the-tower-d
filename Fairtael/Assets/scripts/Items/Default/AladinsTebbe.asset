@@ -15,8 +15,9 @@ MonoBehaviour:
   damageChange: 0
   firerateChange: 0
   rangeChange: 0
-  acuraty: 1
-  walkspeed: 1
+  bulletSpeed: 0
+  acuraty: -0.1
+  walkspeed: 0.1
   maxHearts: 0
   hearts: 0
   prefab: {fileID: 4993178469000998571, guid: 6a70e56ae58f99848b8bf2b26ffa3fff, type: 3}

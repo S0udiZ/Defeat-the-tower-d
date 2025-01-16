@@ -1,6 +1,6 @@
+
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -37,7 +37,7 @@ public class Enemyshooting : MonoBehaviour
 
 
     private Vector2 lastMovementDirection;
-    quaternion oldRotation;
+    Quaternion oldRotation;
     Quaternion angleFixed;
 
     Vector2 shootdir;
@@ -112,7 +112,8 @@ public class Enemyshooting : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         //why the fyuck does it need to bee a quaternion - ahhhh:-(
-        quaternion angleFixed = Quaternion.Euler(0, 0, angle);
+        
+        Quaternion angleFixed = Quaternion.Euler(0, 0, angle);
 
         bulletPrefab.transform.rotation = angleFixed;
 

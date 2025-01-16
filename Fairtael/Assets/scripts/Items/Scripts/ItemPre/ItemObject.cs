@@ -15,6 +15,7 @@ public abstract class ItemObject : ScriptableObject
     public float damageChange;
     public float firerateChange;
     public float rangeChange;
+    public float bulletSpeed;
 
     public float acuraty;
 

@@ -1,6 +1,7 @@
+
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -40,15 +41,18 @@ public class WeaponShoot : MonoBehaviour
     AudioManage audioManager;
 
     private Vector2 lastMovementDirection;
-    quaternion oldRotation;
+    Quaternion oldRotation;
     Quaternion angleFixed;
 
     Vector2 shootdir;
+
+    public ItemBuffs Buffs;
 
     void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        Buffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
     }
 
     void Update()
@@ -70,7 +74,7 @@ public class WeaponShoot : MonoBehaviour
             {
                 Shoot();
                 justFired = true;
-                StartCoroutine(WaitAndAllowShoot(fireRate));
+                StartCoroutine(WaitAndAllowShoot(fireRate*Buffs.firerateChange));
             }
         }
         else
@@ -87,7 +91,7 @@ public class WeaponShoot : MonoBehaviour
                     justFired = true;
                     audioManager.PlaySFX(audioManager.playerShoot);
                     Shoot();
-                    StartCoroutine(WaitAndAllowShoot(fireRate));
+                    StartCoroutine(WaitAndAllowShoot(fireRate*Buffs.firerateChange));
                 }
             }
 
@@ -130,7 +134,7 @@ public class WeaponShoot : MonoBehaviour
                 float angle = Mathf.Atan2(-shootdir.y, -shootdir.x) * Mathf.Rad2Deg;
 
                 // Create a rotation quaternion based on this angle
-                angleFixed = Quaternion.Euler(0, 0, angle);
+                angleFixed = Quaternion.Euler(0, 0, angle + (Random.Range(-2f, 2f) * Buffs.acuraty));
 
                 shootdir = Vector2.zero;
             }
@@ -139,7 +143,7 @@ public class WeaponShoot : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
 
             // Attach a script to the bullet to handle movement and raycast and cool shit
-            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed, targetLayer, damage, life, flipSprite);
+            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed*Buffs.bulletSpeed, targetLayer, damage*Buffs.damageChange, life*Buffs.rangeChange, flipSprite);
         }
         IEnumerator WaitAndAllowShoot(float tTime)
         {
