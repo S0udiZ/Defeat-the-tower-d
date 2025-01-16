@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -3648,7 +3648,6 @@ MonoBehaviour:
   hearttext: {fileID: 660905884}
   FullHeart: {fileID: 2985321592475801709, guid: ddd2a659b93f8e043a9faada19a3a8dc, type: 3}
   HollowHeart: {fileID: 0}
-  heartPlacement: {x: 0, y: 0, z: 0}
   purchagedUI: {fileID: 0}
 --- !u!114 &1630808793
 MonoBehaviour:

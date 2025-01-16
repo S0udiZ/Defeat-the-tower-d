@@ -39,7 +39,7 @@ public class playercontroller : MonoBehaviour
 
     public GameObject FullHeart;
     public GameObject HollowHeart;
-    public Vector3 heartPlacement;
+
 
     Animator ani;
 
@@ -68,12 +68,7 @@ public class playercontroller : MonoBehaviour
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
         purchagedUI = game.transform.GetChild(0).GetChild(9).gameObject;
 
-        Vector3 placement = heartPlacement;
-        for (int i = 0; i < hearts; i++)
-        {
-            placement = placement + new Vector3(20, 0, 0);
-            Instantiate(FullHeart, placement, Quaternion.identity, playerUI.transform);
-        }
+        
     }
 
     // Update is called once per frame
