@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
-  m_Name: Square
+  m_Name: TheSwordInTheStone
   m_EditorClassIdentifier: 
-  damageChange: 1
-  firerateChange: 0
+  damageChange: 0.3
+  firerateChange: -0.2
   rangeChange: 0
   bulletSpeed: 0
   acuraty: 0
-  walkspeed: -0.9
+  walkspeed: 0
   maxHearts: 0
   hearts: 0
-  prefab: {fileID: 4993178469000998571, guid: 58d6bdf7e35aaed46a0019478b3ec880, type: 3}
-  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  prefab: {fileID: 4993178469000998571, guid: 76301b20a6a03ef44bcd3e9b2194517d, type: 3}
+  sprite: {fileID: 21300000, guid: 48afb7f4d7d7fc849a0cf3d11f0165fe, type: 3}
   type: 2
-  itemDescription: +++Damage --WalkSpeed
+  itemDescription: +Damage -Firerate
