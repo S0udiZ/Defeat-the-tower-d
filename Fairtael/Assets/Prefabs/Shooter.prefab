@@ -320,7 +320,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 72
-  fireRate: 2
+  fireRate: 1
   justFired: 0
   player: {fileID: 0}
 --- !u!58 &7302618193180014017

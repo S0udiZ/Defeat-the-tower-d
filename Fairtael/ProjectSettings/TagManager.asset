@@ -17,6 +17,7 @@ TagManager:
   - purchagedUI
   - Audio
   - enemyObs
+  - buffs
   layers:
   - Default
   - TransparentFX
