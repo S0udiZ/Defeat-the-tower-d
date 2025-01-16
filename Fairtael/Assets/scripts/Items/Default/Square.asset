@@ -17,7 +17,7 @@ MonoBehaviour:
   rangeChange: 0
   bulletSpeed: 0
   acuraty: 0
-  walkspeed: -0.9
+  walkspeed: -0.5
   maxHearts: 0
   hearts: 0
   prefab: {fileID: 4993178469000998571, guid: 58d6bdf7e35aaed46a0019478b3ec880, type: 3}
