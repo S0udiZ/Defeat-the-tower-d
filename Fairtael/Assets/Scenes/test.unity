@@ -1566,7 +1566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &660905883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2836,8 +2836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -322.5, y: -117.2}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -358.6, y: -186.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.49999967, y: 0.5000001}
 --- !u!114 &1276894460
 MonoBehaviour:
@@ -3720,8 +3720,13 @@ MonoBehaviour:
   rb: {fileID: 1630808794}
   hearts: 3
   maxHearts: 3
-  heatsImg: []
+  heartsImg:
+  - {fileID: 1276894460}
+  - {fileID: 1769232227}
+  - {fileID: 1715634089}
   hearttext: {fileID: 660905884}
+  fullHeart: {fileID: 21300000, guid: 408d0e5e38e2625428be3a97102a40f5, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 1ec1f7cbf31336a4aa78d4a3fa318683, type: 3}
   purchagedUI: {fileID: 0}
 --- !u!114 &1630808793
 MonoBehaviour:
@@ -4389,8 +4394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.5, y: -117.2}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -240.6, y: -186.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.50000024, y: 0.5000001}
 --- !u!114 &1715634089
 MonoBehaviour:
@@ -4793,8 +4798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261.5, y: -117.2}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -297.6, y: -186.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.50000024, y: 0.5000001}
 --- !u!114 &1769232227
 MonoBehaviour:

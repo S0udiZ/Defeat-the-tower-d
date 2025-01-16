@@ -31,8 +31,10 @@ public class playercontroller : MonoBehaviour
 
     public float hearts;
     public float maxHearts;
-    public Image[] heatsImg;
+    public Image[] heartsImg;
     public TMP_Text hearttext;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
 
     bool immunity = false;
 
@@ -71,6 +73,18 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        for (int i = 0; i < maxHearts; i++)
+        {
+            if (i < hearts)
+            {
+                heartsImg[i].sprite = fullHeart;
+            }
+            else
+            {
+                heartsImg[i].sprite = emptyHeart;
+            }
+        }
+
         // Get current animation state info
         AnimatorStateInfo stateInfo = ani.GetCurrentAnimatorStateInfo(0);
 
