@@ -50,7 +50,10 @@ public class ItemChoiceScript : MonoBehaviour
 
         itemLeft = allItems[Random.Range(0,allItems.Count)];
         itemRight = allItems[Random.Range(0, allItems.Count)];
-
+        while (itemLeft == itemRight)
+        {
+            itemRight = allItems[Random.Range(0, allItems.Count)];
+        }
         Image leftSprite = ItemChoiceUI.gameObject.transform.GetChild(3).gameObject.GetComponent<Image>();
         TMP_Text leftItemName = ItemChoiceUI.gameObject.transform.GetChild(1).gameObject.GetComponent<TMP_Text>();
         TMP_Text leftItemDescription = ItemChoiceUI.gameObject.transform.GetChild(2).gameObject.GetComponent<TMP_Text>(); 
