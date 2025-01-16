@@ -106,7 +106,7 @@ public class Enemyshooting : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         // Calculate the direction from the player to the mouse
-        Vector3 direction = player.gameObject.transform.position - bulletSpawnPoint.transform.position;
+        Vector3 direction = (player.gameObject.transform.position-new Vector3(0,0.2f,0)) - bulletSpawnPoint.transform.position;
 
         // Calculate the angle in degrees cuz u know
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
