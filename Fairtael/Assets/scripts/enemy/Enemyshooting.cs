@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,6 +34,8 @@ public class Enemyshooting : MonoBehaviour
 
     Animator ani;
 
+    public RoomGen roomgen;
+
     //public bool usingdirShooting = false;
 
 
@@ -48,7 +51,7 @@ public class Enemyshooting : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         StartCoroutine(shootdelay());
-
+        roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
     }
 
     void Update()
@@ -93,7 +96,9 @@ public class Enemyshooting : MonoBehaviour
         IEnumerator shootdelay()
         {
         player = GameObject.FindWithTag("Player");
-        yield return new WaitForSeconds(fireRate);
+        roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
+
+        yield return new WaitForSeconds(fireRate/(roomgen.roomNumber/5f));
 
         // Calculate the direction from the player to the mouse
         Vector3 aniDirFlipW = player.gameObject.transform.position - bulletSpawnPoint.transform.position;

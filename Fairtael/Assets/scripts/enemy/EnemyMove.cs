@@ -12,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] Vector3 targetPos;
     Enemybase basescript;
 
-
+    public RoomGen roomgen;
 
     void Start()
     {
@@ -21,7 +21,8 @@ public class EnemyMove : MonoBehaviour
         {
             player = GameObject.FindWithTag("Player").transform;
             path = GetComponent<AIPath>();
-            path.maxSpeed = Movespeed;
+            roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
+            path.maxSpeed = Movespeed/(roomgen.roomNumber/5);
         }
 
 
@@ -30,8 +31,9 @@ public class EnemyMove : MonoBehaviour
             //umm uhh moves the shooters path to the other side of the screen
             player = GameObject.FindWithTag("Player").transform;
             path = GetComponent<AIPath>();
-            path.maxSpeed = Movespeed;
-            
+            roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
+            path.maxSpeed = Movespeed / (roomgen.roomNumber/5);
+
         }
 
     }
@@ -45,7 +47,8 @@ public class EnemyMove : MonoBehaviour
                 targetPos = player.transform.position + -dir * 10;
                 targetPos = targetPos - transform.position;
 
-                path.maxSpeed = Movespeed;
+                roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
+                path.maxSpeed = Movespeed / (roomgen.roomNumber / 5);
 
                 path.destination = targetPos;
             }
@@ -53,7 +56,8 @@ public class EnemyMove : MonoBehaviour
             {
                 path.destination = player.position;
 
-                path.maxSpeed = Movespeed;
+                roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
+                path.maxSpeed = Movespeed / (roomgen.roomNumber / 5);
             }
 
 

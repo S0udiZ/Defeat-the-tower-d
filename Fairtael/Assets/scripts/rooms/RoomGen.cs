@@ -11,11 +11,6 @@ public class RoomGen : MonoBehaviour
 
     public RoomSpawn roomSpawnScript;
 
-
-    /*public GameObject Room1;
-    public GameObject Room2;
-    public GameObject Emptyroom;
-    public GameObject ItemRoom;*/
     public GameObject OldRoom;
 
     GameObject[] everyRoomSpawn;
@@ -27,7 +22,7 @@ public class RoomGen : MonoBehaviour
 
     public TMP_Text chanceText;
 
-    public int roomNumber;
+    public float roomNumber;
 
     AudioManage audioManager;
 
