@@ -26,11 +26,11 @@ public class WeaponShoot : MonoBehaviour
     // Bullet speed
     float bulletSpeed = 11f;
 
-    float fireRate = 0.3f;
+    float fireRate = 0.4f;
 
     float damage = 1f;
 
-    float life = 0.5f;
+    float life = 0.6f;
 
     public bool justFired = false;
 
