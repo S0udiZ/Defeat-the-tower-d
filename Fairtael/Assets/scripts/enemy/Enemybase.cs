@@ -57,7 +57,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     {
         if (!this.gameObject.CompareTag("enemyObs") || enemyshoot==null)
         {
-             
+            Debug.LogWarning("gg");
             rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
             yield return new WaitForSeconds(0.1f);

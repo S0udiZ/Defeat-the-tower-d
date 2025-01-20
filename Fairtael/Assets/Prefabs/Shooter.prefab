@@ -211,7 +211,7 @@ MonoBehaviour:
   enemy: {fileID: 8025922464453891962}
   obstacle: {fileID: 4172112716031209849, guid: afcb53c73f255e54ca0ef5f893b10c8c, type: 3}
   Edamage: 1
-  enemymovescript: {fileID: 0}
+  enemyshoot: {fileID: 0}
   roomgenscript: {fileID: 0}
 --- !u!114 &1847873390737818525
 MonoBehaviour:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5072785157392898520}
   bulletSpawnPoint: {fileID: 7842724902181142332}
-  bulletPrefab: {fileID: 572995669589774358, guid: 9b8b3eddc75b1e94aa39a4630ae723a7, type: 3}
+  bulletPrefab: {fileID: 572995669589774358, guid: 30db9c872250dd74e982a77451b84679, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 72

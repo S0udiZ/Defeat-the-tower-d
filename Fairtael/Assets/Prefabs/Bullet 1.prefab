@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4700427722812946818}
   - component: {fileID: 4342607287208493359}
   m_Layer: 0
-  m_Name: BulletSlime
+  m_Name: Bullet 1
   m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,11 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572995669589774358}
   serializedVersion: 2
-<<<<<<< Updated upstream
-  m_LocalRotation: {x: 0, y: 0, z: -0.9995178, w: 0.031051606}
-=======
-  m_LocalRotation: {x: 0, y: 0, z: -0.9256407, w: 0.37840372}
->>>>>>> Stashed changes
+  m_LocalRotation: {x: 0, y: 0, z: -0.9779893, w: 0.2086552}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 793a7ba6088d6b648b3187fa0051aed5, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.20000005, a: 1}
+  m_Color: {r: 0.21461558, g: 1, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
