@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
-  m_Name: AladinsTebbe
+  m_Name: Red Hood
   m_EditorClassIdentifier: 
   damageChange: 0
   firerateChange: 0
   rangeChange: 0
-  bulletSpeed: 0
-  acuraty: -0.4
-  walkspeed: 0.1
+  bulletSpeed: 0.3
+  acuraty: -0.7
+  walkspeed: 0
   maxHearts: 0
   hearts: 0
-  prefab: {fileID: 4993178469000998571, guid: 6a70e56ae58f99848b8bf2b26ffa3fff, type: 3}
-  sprite: {fileID: 21300000, guid: 77a89bfa264987b44afdcb47fcfb012f, type: 3}
+  prefab: {fileID: 4993178469000998571, guid: 0a0eb2bd531ae8b4c81966ca108bf6d9, type: 3}
+  sprite: {fileID: 21300000, guid: dd79e0dc260b0744193703987531f4e6, type: 3}
   type: 2
-  itemDescription: +Speed   -Accuraty
+  itemDescription: +BulletSpeed  -Acuraty

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
-  m_Name: HavfrueHale
+  m_Name: Sword in the stone
   m_EditorClassIdentifier: 
-  damageChange: 0.2
-  firerateChange: 0
+  damageChange: 0.3
+  firerateChange: -0.2
   rangeChange: 0
   bulletSpeed: 0
   acuraty: 0
-  walkspeed: -0.2
+  walkspeed: 0
   maxHearts: 0
   hearts: 0
-  prefab: {fileID: 4993178469000998571, guid: bc2145989bafbf9468191954fec13693, type: 3}
-  sprite: {fileID: 21300000, guid: ab98d45ef3328a04386961287bc51117, type: 3}
+  prefab: {fileID: 4993178469000998571, guid: 76301b20a6a03ef44bcd3e9b2194517d, type: 3}
+  sprite: {fileID: 21300000, guid: d73933fc482d59e4ab96113f3f84b312, type: 3}
   type: 2
-  itemDescription: +damage   -WalkSpeed
+  itemDescription: +Damage -Firerate

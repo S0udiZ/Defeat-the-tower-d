@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
-  m_Name: "Snehvide's \xC6ble 1"
+  m_Name: Bread Crumbs
   m_EditorClassIdentifier: 
   damageChange: 0
   firerateChange: 0
   rangeChange: 0
   bulletSpeed: 0
-  acuraty: 0
+  acuraty: -4
   walkspeed: 0
   maxHearts: 1
-  hearts: 0
-  prefab: {fileID: 4993178469000998571, guid: 1fc80e0139e510845b79b4d0a0895aea, type: 3}
-  sprite: {fileID: 21300000, guid: cb8b2d76dd1d339459a923e9f42efd53, type: 3}
+  hearts: 1
+  prefab: {fileID: 4993178469000998571, guid: 21d893b01f6528447aab7dbc5405867d, type: 3}
+  sprite: {fileID: 21300000, guid: a987f5f8c4aa0504aa85484618b5f33f, type: 3}
   type: 2
-  itemDescription: +MaxHeart
+  itemDescription: +Heart +MaxHeart  --Acuraty
