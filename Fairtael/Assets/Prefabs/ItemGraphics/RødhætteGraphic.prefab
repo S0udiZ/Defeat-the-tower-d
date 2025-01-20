@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920642144832326449, guid: 5a97aa6be3d7bd044b30e49bf9c71e2d, type: 3}
       propertyPath: m_Name
-      value: ItemGraphic Variant 3
+      value: "R\xF8dh\xE6tteGraphic"
       objectReference: {fileID: 0}
     - target: {fileID: 8345282574151020299, guid: 5a97aa6be3d7bd044b30e49bf9c71e2d, type: 3}
       propertyPath: m_Type
@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 8345282574151020299, guid: 5a97aa6be3d7bd044b30e49bf9c71e2d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 48afb7f4d7d7fc849a0cf3d11f0165fe, type: 3}
+      objectReference: {fileID: 21300000, guid: dd79e0dc260b0744193703987531f4e6, type: 3}
     - target: {fileID: 8345282574151020299, guid: 5a97aa6be3d7bd044b30e49bf9c71e2d, type: 3}
       propertyPath: m_Color.b
       value: 1

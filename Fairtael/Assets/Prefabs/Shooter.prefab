@@ -44,9 +44,6 @@ GameObject:
   - component: {fileID: 4388817138329348487}
   - component: {fileID: 5072785157392898520}
   - component: {fileID: 1498006567289240747}
-  - component: {fileID: 1503041721860054793}
-  - component: {fileID: 8013832535772773340}
-  - component: {fileID: 9207081461298954241}
   - component: {fileID: 1847873390737818525}
   - component: {fileID: 7302618193180014017}
   - component: {fileID: -9057053475438682366}
@@ -216,92 +213,6 @@ MonoBehaviour:
   Edamage: 1
   enemymovescript: {fileID: 0}
   roomgenscript: {fileID: 0}
---- !u!114 &1503041721860054793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025922464453891962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
---- !u!114 &8013832535772773340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025922464453891962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
-  radius: 0.5
-  height: 2
-  canMove: 1
-  maxSpeed: 2
-  gravity: {x: NaN, y: NaN, z: NaN}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffsetCompatibility: NaN
-  repathRateCompatibility: NaN
-  canSearchCompability: 0
-  orientation: 1
-  enableRotation: 0
-  autoRepath:
-    mode: 2
-    interval: 0.5
-    sensitivity: 10
-    maximumInterval: 2
-    visualizeSensitivity: 0
-  targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
-  rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
-  slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
-  constrainInsideGraph: 0
---- !u!114 &9207081461298954241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025922464453891962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c22ddad0af01f640b8378b4ccc70264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Movespeed: 0
-  player: {fileID: 0}
-  shooter: 1
-  targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1847873390737818525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +234,7 @@ MonoBehaviour:
   fireRate: 1
   justFired: 0
   player: {fileID: 0}
+  roomgen: {fileID: 0}
 --- !u!58 &7302618193180014017
 CircleCollider2D:
   m_ObjectHideFlags: 0

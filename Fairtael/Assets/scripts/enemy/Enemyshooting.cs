@@ -98,7 +98,7 @@ public class Enemyshooting : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
 
-        yield return new WaitForSeconds(fireRate/(roomgen.roomNumber/5f));
+        yield return new WaitForSeconds(fireRate-(roomgen.roomNumber/5f));
 
         // Calculate the direction from the player to the mouse
         Vector3 aniDirFlipW = player.gameObject.transform.position - bulletSpawnPoint.transform.position;

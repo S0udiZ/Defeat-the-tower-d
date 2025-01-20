@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
+  m_Name: The Sword In The Stone
+  m_EditorClassIdentifier: 
+  damageChange: 0.3
+  firerateChange: -0.2
+  rangeChange: 0
+  bulletSpeed: 0
+  acuraty: 0
+  walkspeed: 0
+  maxHearts: 0
+  hearts: 0
+  prefab: {fileID: 4993178469000998571, guid: 76301b20a6a03ef44bcd3e9b2194517d, type: 3}
+  sprite: {fileID: 21300000, guid: d73933fc482d59e4ab96113f3f84b312, type: 3}
+  type: 2
+  itemDescription: +Damage -Firerate
