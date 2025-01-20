@@ -4817,6 +4817,7 @@ MonoBehaviour:
   - {fileID: 678532263647076357, guid: 13635ecca02b1ed408f83f6b27fe6577, type: 3}
   - {fileID: 678532263647076357, guid: f01b35ec404492e4c89f33ae83ee0fd6, type: 3}
   - {fileID: 678532263647076357, guid: d1eb7708d4a342b44844ebf187b19fb9, type: 3}
+  - {fileID: 678532263647076357, guid: 20d9bc0f551971d469ddeef8b5a62830, type: 3}
   enemies: []
   roomSpawnScript: {fileID: 0}
   OldRoom: {fileID: 0}
