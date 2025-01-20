@@ -31,8 +31,8 @@ public class playercontroller : MonoBehaviour
 
     public float hearts;
     public float maxHearts;
+
     public Image[] heartsImg;
-    public TMP_Text hearttext;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
@@ -64,7 +64,6 @@ public class playercontroller : MonoBehaviour
 
         ani = GetComponent<Animator>();
 
-        hearttext.text = "Hearts: " + hearts;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
@@ -78,8 +77,16 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        for (int i = 0; i < maxHearts; i++)
+        for (int i = 0; i < heartsImg.Length; i++)
         {
+            if (i >= maxHearts)
+            {
+                heartsImg[i].gameObject.SetActive(false);
+            }
+            else 
+            {
+                heartsImg[i].gameObject.SetActive(true);
+            }
             if (i < hearts)
             {
                 heartsImg[i].sprite = fullHeart;
@@ -88,6 +95,7 @@ public class playercontroller : MonoBehaviour
             {
                 heartsImg[i].sprite = emptyHeart;
             }
+            
         }
 
         // Get current animation state info
@@ -148,9 +156,6 @@ public class playercontroller : MonoBehaviour
 
             inventory.items.Clear();
         }
-
-        //theres probably a better way to do this
-        hearttext.text = "Hearts: " + hearts;
 
     }
     public void ChangeHearts(float tMaxHearts, float tHearts)

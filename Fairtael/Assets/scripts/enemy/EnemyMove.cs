@@ -22,7 +22,7 @@ public class EnemyMove : MonoBehaviour
             player = GameObject.FindWithTag("Player").transform;
             path = GetComponent<AIPath>();
             roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
-            path.maxSpeed = Movespeed/(roomgen.roomNumber/5);
+            path.maxSpeed = Movespeed * (roomgen.roomNumber/5);
         }
 
 
@@ -32,7 +32,7 @@ public class EnemyMove : MonoBehaviour
             player = GameObject.FindWithTag("Player").transform;
             path = GetComponent<AIPath>();
             roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
-            path.maxSpeed = Movespeed / (roomgen.roomNumber/5);
+            path.maxSpeed = Movespeed * (roomgen.roomNumber/5);
 
         }
 
@@ -48,7 +48,7 @@ public class EnemyMove : MonoBehaviour
                 targetPos = targetPos - transform.position;
 
                 roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
-                path.maxSpeed = Movespeed / (roomgen.roomNumber / 5);
+                path.maxSpeed = Movespeed * (roomgen.roomNumber / 5);
 
                 path.destination = targetPos;
             }
@@ -57,7 +57,7 @@ public class EnemyMove : MonoBehaviour
                 path.destination = player.position;
 
                 roomgen = GameObject.FindWithTag("roomGen").GetComponent<RoomGen>();
-                path.maxSpeed = Movespeed / (roomgen.roomNumber / 5);
+                path.maxSpeed = Movespeed * (roomgen.roomNumber / 5);
             }
 
 
