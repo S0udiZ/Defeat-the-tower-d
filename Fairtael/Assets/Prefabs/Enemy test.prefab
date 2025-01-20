@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2972798321128318466}
   - component: {fileID: -5485521707651787838}
   - component: {fileID: 3859002939065775359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy test
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -269,6 +269,7 @@ MonoBehaviour:
   player: {fileID: 0}
   shooter: 0
   targetPos: {x: 0, y: 0, z: 0}
+  roomgen: {fileID: 0}
 --- !u!58 &-5485521707651787838
 CircleCollider2D:
   m_ObjectHideFlags: 0
