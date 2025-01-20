@@ -96,7 +96,9 @@ public class playercontroller : MonoBehaviour
                 heartsImg[i].sprite = emptyHeart;
             }
             
+        
         }
+        if(hearts > maxHearts) hearts = maxHearts;
 
         // Get current animation state info
         AnimatorStateInfo stateInfo = ani.GetCurrentAnimatorStateInfo(0);
