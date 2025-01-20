@@ -12,7 +12,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     public int Edamage = 1;
     SpriteRenderer spriteRenderer;
 
-    public EnemyMove enemymovescript;
+    public Enemyshooting enemyshoot;
     public RoomGen roomgenscript;
 
     AudioManage audioManager;
@@ -22,6 +22,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     void Awake()
     {
+        enemyshoot = this.gameObject.GetComponent<Enemyshooting>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         GameObject roomGenObj = GameObject.FindWithTag("roomGen");
         roomgenscript = roomGenObj.GetComponent<RoomGen>();
@@ -54,12 +55,14 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     public IEnumerator stun()
     {
-        if (!this.gameObject.CompareTag("enemyObs"))
+        if (!this.gameObject.CompareTag("enemyObs") || enemyshoot==null)
         {
+             
             rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
             yield return new WaitForSeconds(0.1f);
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            
         }
     }
 
