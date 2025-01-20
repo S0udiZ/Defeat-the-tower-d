@@ -54,6 +54,8 @@ public class playercontroller : MonoBehaviour
 
     public ItemBuffs Buffs;
 
+    public HighScore highscore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -154,6 +156,16 @@ public class playercontroller : MonoBehaviour
             TMP_Text txt = deathUI.gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
             
             txt.text = "Floors Cleared:  "+ roomGen.roomNumber;
+
+
+            if (roomGen.roomNumber > highscore.HighScoreInt) highscore.HighScoreInt = roomGen.roomNumber;
+
+
+            TMP_Text txt2 = deathUI.gameObject.transform.GetChild(2).GetComponent<TMP_Text>();
+
+            txt2.text = "HIGH SCORE:  " + highscore.HighScoreInt;
+
+
 
             Time.timeScale = 0f;
 
