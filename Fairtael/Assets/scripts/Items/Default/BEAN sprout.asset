@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
+  m_Name: BEAN sprout
+  m_EditorClassIdentifier: 
+  damageChange: 0
+  firerateChange: 0
+  rangeChange: 0
+  bulletSpeed: 0
+  acuraty: 0
+  walkspeed: 0
+  maxHearts: -1
+  hearts: 2
+  prefab: {fileID: 4993178469000998571, guid: f66d1076076461b429c926031d432350, type: 3}
+  sprite: {fileID: 21300000, guid: d193371b03959c5499d6abd34ba7dc37, type: 3}
+  type: 2
+  itemDescription: ++Heart -MaxHeart
