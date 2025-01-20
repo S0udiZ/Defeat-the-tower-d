@@ -152,6 +152,7 @@ public class playercontroller : MonoBehaviour
 
             deathUI.SetActive(true);
             TMP_Text txt = deathUI.gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
+            
             txt.text = "Floors Cleared:  "+ roomGen.roomNumber;
 
             Time.timeScale = 0f;

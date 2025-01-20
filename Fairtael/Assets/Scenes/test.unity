@@ -4673,6 +4673,11 @@ MonoBehaviour:
   - {fileID: 678532263647076357, guid: 09cab502b6f25d048a9bc7393b670c1e, type: 3}
   - {fileID: 678532263647076357, guid: 1ee7f2d8beae3af49bf1f66d1be6794b, type: 3}
   - {fileID: 678532263647076357, guid: c7f09ebcff4277548ad39f38fd537bc6, type: 3}
+  - {fileID: 678532263647076357, guid: 65b476114d54f044e9a64e0e6c655d83, type: 3}
+  - {fileID: 678532263647076357, guid: b08531452474e3c49a0a10e49b8c6a54, type: 3}
+  - {fileID: 678532263647076357, guid: 47bb774523f4efa4b8993bdf7e1feb33, type: 3}
+  - {fileID: 678532263647076357, guid: abe54510e9a12ec4ca611a8f87076c5e, type: 3}
+  - {fileID: 678532263647076357, guid: 315f231ba73fe3c4fa61cdd09308b417, type: 3}
   enemies: []
   roomSpawnScript: {fileID: 0}
   OldRoom: {fileID: 0}
