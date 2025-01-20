@@ -16,7 +16,7 @@ MonoBehaviour:
   firerateChange: 0
   rangeChange: 0
   bulletSpeed: 0
-  acuraty: -0.1
+  acuraty: -0.4
   walkspeed: 0.1
   maxHearts: 0
   hearts: 0

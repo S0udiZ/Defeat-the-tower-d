@@ -22,7 +22,7 @@ public class Enemyshooting : MonoBehaviour
     // Bullet speed
     float bulletSpeed = 7f;
 
-    public float fireRate = 5;
+    public float fireRate = 6;
 
     int damage = 1;
 

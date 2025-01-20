@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Kejseren's Nye Kl\xE6der"
   m_EditorClassIdentifier: 
   damageChange: 1
-  firerateChange: -0.1
+  firerateChange: -0.2
   rangeChange: 0
   bulletSpeed: 0
   acuraty: 0
@@ -23,4 +23,4 @@ MonoBehaviour:
   prefab: {fileID: 4993178469000998571, guid: 97583cb93f36e754682a01f8753a8d20, type: 3}
   sprite: {fileID: 21300000, guid: 1993aa44fa9f72f4bba9ee6de99c6a02, type: 3}
   type: 2
-  itemDescription: +++Damage -MaxHearts
+  itemDescription: +++Damage -MaxHearts -fireRate
