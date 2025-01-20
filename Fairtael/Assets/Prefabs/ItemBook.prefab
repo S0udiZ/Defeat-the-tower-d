@@ -156,6 +156,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 810740ccdda1f0f48865795d96c3a106, type: 2}
   - {fileID: 11400000, guid: 1d93bc3f79a53444bb16e416fe239c5e, type: 2}
   - {fileID: 11400000, guid: c52c6f459cf7069459d5aea828ffe087, type: 2}
+  - {fileID: 11400000, guid: 716477c95b4316a4e9085b9001061cbd, type: 2}
+  - {fileID: 11400000, guid: 023a8377906c7c74bbed9f35ec2a659c, type: 2}
   itemRight: {fileID: 0}
   itemLeft: {fileID: 0}
   ItemChoiceUI: {fileID: 0}

@@ -103,7 +103,7 @@ public class RoomGen : MonoBehaviour
 
 
             }
-            ItemChance += Random.Range(1, 16);
+            ItemChance += Random.Range(4, 16);
 
             player = GameObject.FindWithTag("Player");
             playerSpawn = GameObject.FindWithTag("PlayerSpawn");
