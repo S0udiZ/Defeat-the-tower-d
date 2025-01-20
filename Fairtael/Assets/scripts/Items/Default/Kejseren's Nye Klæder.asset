@@ -21,6 +21,6 @@ MonoBehaviour:
   maxHearts: -1
   hearts: 0
   prefab: {fileID: 4993178469000998571, guid: 97583cb93f36e754682a01f8753a8d20, type: 3}
-  sprite: {fileID: 21300000, guid: d73933fc482d59e4ab96113f3f84b312, type: 3}
+  sprite: {fileID: 21300000, guid: 1993aa44fa9f72f4bba9ee6de99c6a02, type: 3}
   type: 2
   itemDescription: +++Damage -MaxHearts

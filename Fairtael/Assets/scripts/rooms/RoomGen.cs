@@ -62,7 +62,7 @@ public class RoomGen : MonoBehaviour
         //player = GameObject.FindWithTag("Player");
         //playercontroller playerc = player.GetComponent<playercontroller>();
         //playerc.allowNewItem = true;
-        roomNumber++;
+        if(OldRoom != null) roomNumber++;
         if (ItemChance >= Random.Range(1, 101))
         {
             if (OldRoom != null) Destroy(OldRoom);
