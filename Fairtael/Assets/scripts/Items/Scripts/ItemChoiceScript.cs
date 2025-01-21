@@ -15,9 +15,11 @@ public class ItemChoiceScript : MonoBehaviour
     public playercontroller playercontroller;
 
     AudioManage audioManager;
+    public MenuController menuController;
 
     void Awake()
     {
+        menuController = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuController>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
         player = GameObject.FindWithTag("Player");
         playercontroller = player.GetComponent<playercontroller>();
@@ -26,7 +28,7 @@ public class ItemChoiceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) && playercontroller.allowNewItem == false)
         {
             GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
             Transform childTransform = game.gameObject.transform.GetChild(0);

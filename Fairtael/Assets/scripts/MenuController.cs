@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
 
     public playercontroller playercontroller;
+    
 
     public GameObject PauseMenu;
     public bool pauseMenuUp = false;
@@ -37,12 +38,14 @@ public class MenuController : MonoBehaviour
             InventoryMenu.SetActive(false);
             pauseMenuUp = true;
             Time.timeScale = 0f;
+
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenuUp && SceneManager.GetActiveScene().buildIndex != 0)
         {
             PauseMenu.SetActive(false);
             pauseMenuUp = false;
             Time.timeScale = 1f;
+
         }
 
 

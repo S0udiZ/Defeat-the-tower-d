@@ -18,6 +18,7 @@ TagManager:
   - Audio
   - enemyObs
   - buffs
+  - MenuManager
   layers:
   - Default
   - TransparentFX

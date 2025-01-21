@@ -56,9 +56,12 @@ public class playercontroller : MonoBehaviour
 
     public HighScore highscore;
 
+    public MenuController menuController;
+
     // Start is called before the first frame update
     void Start()
     {
+        menuController = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuController>();
 
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManage>();
 
@@ -261,8 +264,8 @@ public class playercontroller : MonoBehaviour
             itemChoiceScript.ItemChoiceUI.SetActive(false);
             Time.timeScale = 1;
             allowNewItem = false;
-            audioManager.PlaySFX(audioManager.itemObtain);
 
+            audioManager.PlaySFX(audioManager.itemObtain);
         }
         else 
         {

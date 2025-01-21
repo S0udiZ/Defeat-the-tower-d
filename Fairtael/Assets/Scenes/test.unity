@@ -4838,6 +4838,7 @@ MonoBehaviour:
   purchagedUI: {fileID: 0}
   Buffs: {fileID: 0}
   highscore: {fileID: 11400000, guid: ffa7532643343fe45a218d7f3fc06d60, type: 2}
+  menuController: {fileID: 0}
 --- !u!114 &1630808793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5649,7 +5650,7 @@ GameObject:
   - component: {fileID: 1720728667}
   m_Layer: 0
   m_Name: MenuManager
-  m_TagString: Untagged
+  m_TagString: MenuManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5669,6 +5670,7 @@ MonoBehaviour:
   playercontroller: {fileID: 0}
   PauseMenu: {fileID: 1662065458}
   pauseMenuUp: 0
+  pauseMenuAllow: 1
   InventoryMenu: {fileID: 1420721393}
   inventoryMenuUp: 0
   MainMenu: {fileID: 0}
