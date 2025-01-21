@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7438769828452416636}
   m_Layer: 0
-  m_Name: Empty Room
+  m_Name: 1 Empty Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,6 +345,8 @@ MonoBehaviour:
   visual: {fileID: 0}
   roomGen: {fileID: 0}
   roomEmpty: {fileID: 0}
+  player: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &7978284576295981304
 GameObject:
   m_ObjectHideFlags: 0

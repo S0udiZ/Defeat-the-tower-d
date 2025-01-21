@@ -13,9 +13,11 @@ public class MenuController : MonoBehaviour
 
     public GameObject InventoryMenu;
     public bool inventoryMenuUp = false;
+    
 
     public GameObject MainMenu;
     public GameObject SettingsMenu;
+
 
     float LevelMenuOpen;
     void Start()
