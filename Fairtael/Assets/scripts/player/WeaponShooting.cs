@@ -144,7 +144,7 @@ public class WeaponShoot : MonoBehaviour
 
             // Attach a script to the bullet to handle movement and raycast and cool shit
             bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed*Buffs.bulletSpeed, targetLayer, damage*Buffs.damageChange, life*Buffs.rangeChange, flipSprite);
-            bullet.transform.localScale = new Vector3((Buffs.damageChange / 4), (Buffs.damageChange / 3), (Buffs.damageChange/4));
+            bullet.transform.localScale = new Vector3((0.2f+Buffs.damageChange / 4), (0.2f + Buffs.damageChange / 4), (0.2f + Buffs.damageChange/4));
         }
         IEnumerator WaitAndAllowShoot(float tTime)
         {
