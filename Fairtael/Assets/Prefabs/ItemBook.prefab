@@ -158,8 +158,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c52c6f459cf7069459d5aea828ffe087, type: 2}
   - {fileID: 11400000, guid: 716477c95b4316a4e9085b9001061cbd, type: 2}
   - {fileID: 11400000, guid: 023a8377906c7c74bbed9f35ec2a659c, type: 2}
+  - {fileID: 11400000, guid: dd373f28ad3d17e46b32cea780e0b5fb, type: 2}
+  - {fileID: 11400000, guid: f7936b09b0a303546b3f70f6286899a2, type: 2}
+  - {fileID: 11400000, guid: 34b4353334d47ca4b92dc36f081e8c99, type: 2}
   itemRight: {fileID: 0}
   itemLeft: {fileID: 0}
   ItemChoiceUI: {fileID: 0}
   player: {fileID: 0}
   playercontroller: {fileID: 0}
+  menuController: {fileID: 0}

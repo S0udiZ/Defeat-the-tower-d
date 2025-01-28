@@ -75,7 +75,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     {
         spriteRenderer.color = new Color(255, 0, 0, 1);
         itemBuffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
-        yield return new WaitForSeconds(0.2f*itemBuffs.stunChange);
+        yield return new WaitForSeconds(0.2f+itemBuffs.stunChange);
         spriteRenderer.color = new Color(255, 255, 255, 1);
     }
     

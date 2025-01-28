@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcecff3b61d8f64a9c72ed99b42c666, type: 3}
+  m_Name: Chimney Sweeper
+  m_EditorClassIdentifier: 
+  damageChange: 0.2
+  stunChange: 0.2
+  firerateChange: 0
+  rangeChange: -0.5
+  bulletSpeed: 0
+  acuraty: 0
+  walkspeed: 0
+  maxHearts: 0
+  hearts: 0
+  prefab: {fileID: 4993178469000998571, guid: df95d8501fbab404a98f98f5a72bb88f, type: 3}
+  sprite: {fileID: 21300000, guid: 89da04f5435167548a2180a42f6a5621, type: 3}
+  type: 2
+  itemDescription: +Damage  +stun  -Range
