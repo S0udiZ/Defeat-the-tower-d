@@ -24,7 +24,7 @@ public class WeaponShoot : MonoBehaviour
     public LayerMask targetLayer;
 
     // Bullet speed
-    float bulletSpeed = 11f;
+    float bulletSpeed = 10f;
 
     float fireRate = 0.4f;
 

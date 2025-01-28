@@ -107,7 +107,7 @@ public class Enemyshooting : MonoBehaviour
 
         else{this.gameObject.GetComponent<SpriteRenderer>().flipX = false;}
 
-        if(roomgen.roomNumber > 50) yield return new WaitForSeconds(0.3f);
+        if(roomgen.roomNumber < 50) yield return new WaitForSeconds(0.3f);
 
         ani.SetTrigger("Shoot");
 

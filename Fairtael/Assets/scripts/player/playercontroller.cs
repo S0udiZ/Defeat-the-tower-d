@@ -150,6 +150,7 @@ public class playercontroller : MonoBehaviour
         {
             if (!hasDied) 
             {
+                Cursor.visible = true;
                 audioManager.PlaySFX(audioManager.playerDeath);
                 this.gameObject.transform.Rotate(0, 0, 90);
                 hasDied = true;
