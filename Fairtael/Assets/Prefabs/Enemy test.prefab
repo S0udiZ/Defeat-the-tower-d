@@ -177,11 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1216456393464430555}
-  hp: 5
+  hp: 4.5
   enemy: {fileID: 4172112716031209849}
   obstacle: {fileID: 4172112716031209849, guid: 5b896770d4b325042bfab1a4a0aa6548, type: 3}
   Edamage: 1
-  enemymovescript: {fileID: 0}
+  enemyshoot: {fileID: 0}
   roomgenscript: {fileID: 0}
 --- !u!114 &4781837537888663818
 MonoBehaviour:

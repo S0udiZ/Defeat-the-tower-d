@@ -58,7 +58,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     public IEnumerator stun()
     {
-        if (!this.gameObject.CompareTag("enemyObs") || enemyshoot==null)
+        if (!this.gameObject.CompareTag("enemyObs") && enemyshoot==null)
         {
             Debug.LogWarning("gg");
             rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;

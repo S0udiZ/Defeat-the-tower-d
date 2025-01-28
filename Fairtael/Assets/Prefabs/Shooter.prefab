@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5072785157392898520}
-  hp: 3
+  hp: 2.5
   enemy: {fileID: 8025922464453891962}
   obstacle: {fileID: 4172112716031209849, guid: afcb53c73f255e54ca0ef5f893b10c8c, type: 3}
   Edamage: 1

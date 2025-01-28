@@ -72,6 +72,7 @@ public class MenuController : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
+        Cursor.visible = true;
     }
     public void ReloadSceneButton()
     {
@@ -79,6 +80,7 @@ public class MenuController : MonoBehaviour
         playercontroller.inventory.items.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+        Cursor.visible = false;
     }
     //this shi is both dumbass
     public void QuitButton()
