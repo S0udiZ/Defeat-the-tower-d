@@ -41,6 +41,7 @@ public class ItemChoiceScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Cursor.visible = true;
         audioManager.PlaySFX(audioManager.pedestal);
         GameObject game = GameObject.FindGameObjectWithTag("ItemBookUI");
         Transform childTransform = game.gameObject.transform.GetChild(0);

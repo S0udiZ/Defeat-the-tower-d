@@ -242,6 +242,7 @@ public class playercontroller : MonoBehaviour
             audioManager.PlaySFX(audioManager.itemObtain);
 
             Debug.LogWarning("dd");
+            Cursor.visible = false;
         }
         else
         {
@@ -266,6 +267,7 @@ public class playercontroller : MonoBehaviour
             allowNewItem = false;
 
             audioManager.PlaySFX(audioManager.itemObtain);
+            Cursor.visible = false;
         }
         else 
         {
