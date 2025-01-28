@@ -5038,6 +5038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acuraty: 0
   damageChange: 0
+  stunChange: 0
   firerateChange: 0
   rangeChange: 0
   bulletSpeed: 0
@@ -5670,7 +5671,6 @@ MonoBehaviour:
   playercontroller: {fileID: 0}
   PauseMenu: {fileID: 1662065458}
   pauseMenuUp: 0
-  pauseMenuAllow: 1
   InventoryMenu: {fileID: 1420721393}
   inventoryMenuUp: 0
   MainMenu: {fileID: 0}
@@ -6199,6 +6199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acuraty: 0
   damageChange: 1
+  stunChange: 0
   firerateChange: 1
   rangeChange: 1
   bulletSpeed: 1

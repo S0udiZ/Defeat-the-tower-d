@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  hp: 3
+  hp: 4
   enemy: {fileID: 4172112716031209849}
   obstacle: {fileID: 0}
   Edamage: 0
-  enemymovescript: {fileID: 0}
+  enemyshoot: {fileID: 0}
   roomgenscript: {fileID: 0}
