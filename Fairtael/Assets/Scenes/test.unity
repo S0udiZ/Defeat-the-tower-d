@@ -5114,6 +5114,14 @@ MonoBehaviour:
   - {fileID: 678532263647076357, guid: 22337780509b42d42994d7abe52a2a0a, type: 3}
   - {fileID: 678532263647076357, guid: 081e92be8f9511f4d9a1ae7141c520a3, type: 3}
   - {fileID: 678532263647076357, guid: 42c8cf630e5439c478060dbdbb1a0e0c, type: 3}
+  - {fileID: 678532263647076357, guid: 7b43540f0c88bdc4cbfe75a5f3e9e3c7, type: 3}
+  - {fileID: 678532263647076357, guid: 2944357e796921d41a0bd7d4d35179f8, type: 3}
+  - {fileID: 678532263647076357, guid: ef5973ca8eb482d45a042f22cb72621e, type: 3}
+  - {fileID: 678532263647076357, guid: c1125a82cb4908c47a47b7f2888ffa6c, type: 3}
+  - {fileID: 678532263647076357, guid: eee52403fa982c34f88f3281fde0a3c1, type: 3}
+  - {fileID: 678532263647076357, guid: 889dee49b809af64782851337ed4e3b6, type: 3}
+  - {fileID: 678532263647076357, guid: afdddb3c447e0be498026be7992abbc3, type: 3}
+  - {fileID: 678532263647076357, guid: 5485181e64867c4478505f245f0ded6f, type: 3}
   enemies: []
   roomSpawnScript: {fileID: 0}
   OldRoom: {fileID: 0}
