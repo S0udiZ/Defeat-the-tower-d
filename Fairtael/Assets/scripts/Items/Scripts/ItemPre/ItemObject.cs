@@ -13,6 +13,7 @@ public abstract class ItemObject : ScriptableObject
 {
 
     public float damageChange;
+    public float stunChange;
     public float firerateChange;
     public float rangeChange;
     public float bulletSpeed;
@@ -23,6 +24,8 @@ public abstract class ItemObject : ScriptableObject
 
     public float maxHearts;
     public float hearts;
+
+
 
     public GameObject prefab; 
 

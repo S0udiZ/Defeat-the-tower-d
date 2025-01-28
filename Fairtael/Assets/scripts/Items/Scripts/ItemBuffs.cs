@@ -14,6 +14,7 @@ public class ItemBuffs : MonoBehaviour
 
     public float acuraty;  
     public float damageChange;
+    public float stunChange;
     public float firerateChange;
     public float rangeChange;
     public float bulletSpeed;
@@ -23,10 +24,11 @@ public class ItemBuffs : MonoBehaviour
     public float maxHearts;
     public float hearts;
 
-    public void ChangeStats(float tacuraty,float tdamageChange, float tfirerateChange, float trangeChange, float twalkspeed, float tmaxHearts, float thearts, float tBulletSpeed)
+    public void ChangeStats(float tacuraty,float tdamageChange,float tstunChange, float tfirerateChange, float trangeChange, float twalkspeed, float tmaxHearts, float thearts, float tBulletSpeed)
     {
         acuraty += tacuraty;
         damageChange += tdamageChange;
+        stunChange += tstunChange;
         firerateChange += tfirerateChange;
         rangeChange += trangeChange;
         walkspeed += twalkspeed;

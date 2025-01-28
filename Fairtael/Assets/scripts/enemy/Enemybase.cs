@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public /*Static?*/ class Enemybase : MonoBehaviour
 
     AudioManage audioManager;
     
-   
+   ItemBuffs itemBuffs;
 
 
     void Awake()
@@ -32,6 +33,8 @@ public /*Static?*/ class Enemybase : MonoBehaviour
         else if (roomgenscript != null && roomgenscript.enemies != null) roomgenscript.enemies.Add(this.gameObject);
         
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        hp += roomgenscript.roomNumber / 10;
     }
 
 
@@ -60,7 +63,8 @@ public /*Static?*/ class Enemybase : MonoBehaviour
             Debug.LogWarning("gg");
             rb.constraints = ~RigidbodyConstraints2D.FreezePositionX | ~RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
-            yield return new WaitForSeconds(0.1f);
+            itemBuffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
+            yield return new WaitForSeconds(0.1f+itemBuffs.stunChange);
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             
         }
@@ -70,7 +74,8 @@ public /*Static?*/ class Enemybase : MonoBehaviour
     IEnumerator redblink()
     {
         spriteRenderer.color = new Color(255, 0, 0, 1);
-        yield return new WaitForSeconds(0.2f);
+        itemBuffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
+        yield return new WaitForSeconds(0.2f*itemBuffs.stunChange);
         spriteRenderer.color = new Color(255, 255, 255, 1);
     }
     
