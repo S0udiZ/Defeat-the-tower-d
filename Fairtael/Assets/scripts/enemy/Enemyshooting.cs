@@ -107,6 +107,8 @@ public class Enemyshooting : MonoBehaviour
 
         else{this.gameObject.GetComponent<SpriteRenderer>().flipX = false;}
 
+        if(roomgen.roomNumber > 50) yield return new WaitForSeconds(0.3f);
+
         ani.SetTrigger("Shoot");
 
         // Calculate the direction from the player to the mouse
