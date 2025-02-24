@@ -110,6 +110,7 @@ public class Enemyshooting : MonoBehaviour
         if(roomgen.roomNumber <= 50) yield return new WaitForSeconds(0.3f);
 
         ani.SetTrigger("Shoot");
+        yield return new WaitForSeconds(0.3f);
 
         // Calculate the direction from the player to the mouse
         Vector3 direction = (player.gameObject.transform.position-new Vector3(0,0.2f,0)) - bulletSpawnPoint.transform.position;
