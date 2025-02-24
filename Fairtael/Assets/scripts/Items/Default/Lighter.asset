@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Lighter
   m_EditorClassIdentifier: 
   damageChange: -0.1
+  damageChangeDiv: 1
   stunChange: 0
   firerateChange: 2
+  firerateChangeDiv: 1
   rangeChange: -2
   bulletSpeed: 0
   acuraty: 0

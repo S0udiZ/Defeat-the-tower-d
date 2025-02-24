@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Chimney Sweeper
   m_EditorClassIdentifier: 
   damageChange: 0.2
+  damageChangeDiv: 1
   stunChange: 0.2
   firerateChange: 0
+  firerateChangeDiv: 1
   rangeChange: -0.5
   bulletSpeed: 0
   acuraty: 0

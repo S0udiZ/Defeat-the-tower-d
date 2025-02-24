@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Shoe
   m_EditorClassIdentifier: 
   damageChange: 0
+  damageChangeDiv: 1
   stunChange: 0.3
   firerateChange: 0
+  firerateChangeDiv: 1
   rangeChange: 1
   bulletSpeed: 0
   acuraty: -1

@@ -74,7 +74,7 @@ public class WeaponShoot : MonoBehaviour
             {
                 Shoot();
                 justFired = true;
-                StartCoroutine(WaitAndAllowShoot(fireRate*Buffs.firerateChange));
+                StartCoroutine(WaitAndAllowShoot((fireRate*Buffs.firerateChange)/Buffs.firerateChangeDiv));
             }
         }
         else
@@ -91,7 +91,7 @@ public class WeaponShoot : MonoBehaviour
                     justFired = true;
                     audioManager.PlaySFX(audioManager.playerShoot);
                     Shoot();
-                    StartCoroutine(WaitAndAllowShoot(fireRate*Buffs.firerateChange));
+                    StartCoroutine(WaitAndAllowShoot((fireRate*Buffs.firerateChange)/Buffs.firerateChangeDiv));
                 }
             }
 
@@ -143,7 +143,7 @@ public class WeaponShoot : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, angleFixed);
 
             // Attach a script to the bullet to handle movement and raycast and cool shit
-            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed*Buffs.bulletSpeed, targetLayer, damage*Buffs.damageChange, life*Buffs.rangeChange, flipSprite);
+            bullet.AddComponent<BulletMovement>().Initialize(bulletSpeed*Buffs.bulletSpeed, targetLayer, (damage*Buffs.damageChange)/Buffs.damageChangeDiv, life*Buffs.rangeChange, flipSprite);
             bullet.transform.localScale = new Vector3((0.2f+Buffs.damageChange / 4), (0.2f + Buffs.damageChange / 4), (0.2f + Buffs.damageChange/4));
         }
         IEnumerator WaitAndAllowShoot(float tTime)

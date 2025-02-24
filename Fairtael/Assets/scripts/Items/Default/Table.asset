@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Table
   m_EditorClassIdentifier: 
   damageChange: 0.1
+  damageChangeDiv: 1
   stunChange: 0.1
   firerateChange: 0.1
+  firerateChangeDiv: 1
   rangeChange: 0.1
   bulletSpeed: 0.1
   acuraty: 0.1

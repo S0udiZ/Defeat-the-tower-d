@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Rapuzel's hair
   m_EditorClassIdentifier: 
   damageChange: -0.1
+  damageChangeDiv: 1
+  stunChange: 0
   firerateChange: 0
+  firerateChangeDiv: 1
   rangeChange: 1
   bulletSpeed: 0
   acuraty: -0.1

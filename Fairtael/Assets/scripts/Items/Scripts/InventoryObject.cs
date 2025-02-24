@@ -19,7 +19,7 @@ public class InventoryObject : ScriptableObject
 
                 items[i].AddAmount(_amount);
                 Buffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
-                Buffs.ChangeStats(items[i].item.acuraty, items[i].item.damageChange, items[i].item.stunChange, items[i].item.firerateChange, items[i].item.rangeChange,  items[i].item.walkspeed, items[i].item.maxHearts, items[i].item.hearts, items[i].item.bulletSpeed);
+                Buffs.ChangeStats(items[i].item.acuraty, items[i].item.damageChange,items[i].item.damageChangeDiv, items[i].item.stunChange, items[i].item.firerateChange, items[i].item.firerateChangeDiv,items[i].item.rangeChange, items[i].item.walkspeed, items[i].item.maxHearts, items[i].item.hearts, items[i].item.bulletSpeed);
 
                 hasItem = true;
                 break;
@@ -29,7 +29,7 @@ public class InventoryObject : ScriptableObject
         {
             items.Add(new Inventoryslot(_item, _amount));
             Buffs = GameObject.FindWithTag("buffs").GetComponent<ItemBuffs>();
-            Buffs.ChangeStats(_item.acuraty, _item.damageChange, _item.stunChange, _item.firerateChange, _item.rangeChange, _item.walkspeed, _item.maxHearts, _item.hearts, _item.bulletSpeed);
+            Buffs.ChangeStats(_item.acuraty, _item.damageChange, _item.damageChangeDiv,_item.stunChange, _item.firerateChange,_item.firerateChangeDiv,_item.rangeChange, _item.walkspeed, _item.maxHearts, _item.hearts, _item.bulletSpeed);
         }
 
     }

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: BEAN
   m_EditorClassIdentifier: 
   damageChange: 0
+  damageChangeDiv: 1
+  stunChange: 0
   firerateChange: 0
+  firerateChangeDiv: 1
   rangeChange: 0
   bulletSpeed: 0
   acuraty: 0

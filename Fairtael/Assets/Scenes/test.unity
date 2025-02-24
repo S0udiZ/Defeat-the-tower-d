@@ -6272,8 +6272,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acuraty: 0
   damageChange: 1
+  damageChangeDiv: 1
   stunChange: 0
   firerateChange: 1
+  firerateChangeDiv: 1
   rangeChange: 1
   bulletSpeed: 1
   walkspeed: 1
